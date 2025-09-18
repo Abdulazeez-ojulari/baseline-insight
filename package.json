@@ -1,0 +1,14 @@
+{
+  "name": "baseline-insight",
+  "version": "1.0.0",
+  "description": "Smart Compatibility Insights for Developers and Teams",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "baseline"
+  ],
+  "author": "Abdulazeez Ojulari",
+  "license": "ISC"
+}
