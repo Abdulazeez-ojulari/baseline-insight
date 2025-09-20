@@ -1,0 +1,21 @@
+{
+    "name": "@baseline-insight/analyzer-cli",
+    "version": "0.1.0",
+    "bin": {
+        "baseline-insight": "dist/cli.js"
+    },
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "start": "node dist/cli.js"
+    },
+    "dependencies": {
+        "@baseline-insight/core-engine": "*",
+        "chokidar": "^4.0.3",
+        "commander": "^14.0.1",
+        "fast-glob": "^3.3.3",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "@types/node": "^24.5.2"
+    }
+}

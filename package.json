@@ -1,10 +1,16 @@
 {
   "name": "baseline-insight",
+  "private": true,
   "version": "1.0.0",
   "description": "Smart Compatibility Insights for Developers and Teams",
   "main": "index.ts",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm -w -r run build",
+    "dev": "concurrently \"npm --filter dashboard dev\" \"npm --filter vscode-extension watch\"",
+    "bootstrap": "npm -w install"
   },
   "keywords": [
     "baseline"
@@ -12,6 +18,7 @@
   "author": "Abdulazeez Ojulari",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "typescript": "^5.9.2"
   }
 }
