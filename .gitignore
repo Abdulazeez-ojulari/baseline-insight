@@ -10,3 +10,5 @@ node_modules/*
 /packages/core-engine/dist
 /packages/core-engine/node_modules/*
 /packages/core-engine/dist/*
+
+test.json

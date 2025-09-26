@@ -70,6 +70,7 @@ function findFeature(query: string): string | null {
     
     if (Array.isArray(entry.compat_features)) {
       for (const c of entry.compat_features) {
+        // console.log(c, 'bdc')
         if (normalize(c) === q || c.toLowerCase().endsWith(q)) return key;
       }
     }
@@ -79,13 +80,13 @@ function findFeature(query: string): string | null {
     }
   }
 
-  const last = query.split(".").slice(-1)[0];
-  if (last && last !== query) {
-    for (const key of Object.keys(features)) {
-      const entry = features[key];
-      if (normalize(entry.name).includes(normalize(last))) return key;
-    }
-  }
+  // const last = query.split(".").slice(-1)[0];
+  // if (last && last !== query) {
+  //   for (const key of Object.keys(features)) {
+  //     const entry = features[key];
+  //     if (normalize(entry.name).includes(normalize(last))) return key;
+  //   }
+  // }
 
   return null;
 }

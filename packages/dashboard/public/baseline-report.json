@@ -1,100 +1,15 @@
 {
-  "scannedFiles": 17,
-  "baselineYear": "2000",
+  "scannedFiles": 59,
+  "baselineYear": "2023",
   "features": {
-    "app-share-targets": {
-      "count": 8,
-      "samples": [
-        "app.route.ts:63",
-        "src/statistic/statistic.service.ts:2321",
-        "src/statistic/statistic.service.ts:2475",
-        "src/statistic/statistic.service.ts:2625",
-        "src/statistic/statistic.service.ts:2759"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "beacons": {
-      "count": 1,
-      "samples": [
-        "app.route.ts:111"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "blocking-render": {
-      "count": 1,
-      "samples": [
-        "app.route.ts:153"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "service-workers": {
-      "count": 1,
-      "samples": [
-        "app.ts:171"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "private-network-access": {
-      "count": 1,
-      "samples": [
-        "app.ts:214"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "atomics-pause": {
-      "count": 6,
-      "samples": [
-        "app.ts:306",
-        "app.ts:358",
-        "app.ts:400",
-        "app.ts:464",
-        "app.ts:492"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "reason": "status:low"
-      }
-    },
-    "canvas-reset": {
+    "dom": {
       "count": 5,
       "samples": [
-        "app.ts:326",
-        "src/statistic/statistic.service.ts:2249",
-        "src/statistic/statistic.service.ts:2406",
-        "src/statistic/statistic.service.ts:2557",
-        "src/statistic/statistic.service.ts:2698"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "reason": "status:low"
-      }
-    },
-    "json": {
-      "count": 1,
-      "samples": [
-        "app.ts:366"
+        "src/index.tsx:201",
+        "src/main.tsx:234",
+        "src/views/decode/Decode.tsx:177",
+        "src/views/home/Home.tsx:186",
+        "src/views/statistic/Statistic.tsx:276"
       ],
       "baseline": {
         "inBaseline": true,
@@ -102,10 +17,14 @@
         "reason": "status:high"
       }
     },
-    "array": {
-      "count": 1,
+    "object-object": {
+      "count": 5,
       "samples": [
-        "app.ts:585"
+        "src/hooks/useFilter.ts:366",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1318",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1531",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1712",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1970"
       ],
       "baseline": {
         "inBaseline": true,
@@ -113,11 +32,11 @@
         "reason": "status:high"
       }
     },
-    "closewatcher": {
+    "execcommand": {
       "count": 2,
       "samples": [
-        "app.ts:614",
-        "src/tests/urlShorter.test.ts:214"
+        "src/common/component/UrlForm.tsx:1092",
+        "src/common/component/UrlList.tsx:1057"
       ],
       "baseline": {
         "inBaseline": false,
@@ -125,399 +44,11 @@
         "reason": "status:false"
       }
     },
-    "dialog": {
-      "count": 8,
-      "samples": [
-        "app.ts:637",
-        "src/db/mongoconnection.ts:284",
-        "src/db/mongoconnection.ts:440",
-        "src/middlewares/error.ts:259",
-        "src/statistic/statistic.service.ts:783"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "wasm": {
-      "count": 1,
-      "samples": [
-        "jest.config.js:0"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "aborting": {
-      "count": 3,
-      "samples": [
-        "jest.config.js:105",
-        "jest.config.js:145",
-        "src/url/url.routes.ts:184"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "app-launch-handler": {
-      "count": 3,
-      "samples": [
-        "jest.setup.ts:62",
-        "src/url/url.controller.ts:2984",
-        "src/url/url.controller.ts:5136"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "webxr-hit-test": {
-      "count": 1,
-      "samples": [
-        "jest.setup.ts:86"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "error-cause": {
-      "count": 1,
-      "samples": [
-        "src/db/mongoconnection.ts:535"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "messageerror": {
-      "count": 1,
-      "samples": [
-        "src/middlewares/error.ts:271"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "reason": "status:low"
-      }
-    },
-    "barprop": {
+    "canvas-2d": {
       "count": 2,
       "samples": [
-        "src/statistic/statistic.model.ts:90",
-        "src/url/url.model.ts:84"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "css-object-model": {
-      "count": 4,
-      "samples": [
-        "src/statistic/statistic.model.ts:717",
-        "src/statistic/statistic.service.ts:124",
-        "src/url/url.model.ts:877",
-        "src/url/url.service.ts:53"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "savedata": {
-      "count": 3,
-      "samples": [
-        "src/statistic/statistic.service.ts:1024",
-        "src/statistic/statistic.service.ts:2831",
-        "src/url/url.service.ts:4700"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "dirname": {
-      "count": 2,
-      "samples": [
-        "src/statistic/statistic.service.ts:1822",
-        "src/statistic/statistic.service.ts:1879"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "reason": "status:low"
-      }
-    },
-    "proxy-reflect": {
-      "count": 1,
-      "samples": [
-        "src/statistic/statistic.service.ts:1940"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "date": {
-      "count": 1,
-      "samples": [
-        "src/statistic/statistic.service.ts:2026"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "contact-picker": {
-      "count": 1,
-      "samples": [
-        "src/statistic/statistic.service.ts:2168"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "url": {
-      "count": 1,
-      "samples": [
-        "src/tests/urlShorter.test.ts:303"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "fetch": {
-      "count": 4,
-      "samples": [
-        "src/tests/urlShorter.test.ts:577",
-        "src/tests/urlShorter.test.ts:1201",
-        "src/url/url.controller.ts:5672",
-        "src/url/url.controller.ts:6279"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "animations-css": {
-      "count": 2,
-      "samples": [
-        "src/tests/urlShorter.test.ts:710",
-        "src/tests/urlShorter.test.ts:1362"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "battery": {
-      "count": 22,
-      "samples": [
-        "src/tests/urlShorter.test.ts:972",
-        "src/tests/urlShorter.test.ts:1628",
-        "src/tests/urlShorter.test.ts:2025",
-        "src/url/url.controller.ts:477",
-        "src/url/url.controller.ts:790"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "geolocation": {
-      "count": 7,
-      "samples": [
-        "src/tests/urlShorter.test.ts:1817",
-        "src/url/url.controller.ts:1335",
-        "src/url/url.service.ts:1110",
-        "src/url/url.service.ts:1960",
-        "src/url/url.service.ts:3053"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "js-modules-service-workers": {
-      "count": 2,
-      "samples": [
-        "src/url/url.controller.ts:184",
-        "src/url/url.service.ts:158"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "body": {
-      "count": 2,
-      "samples": [
-        "src/url/url.controller.ts:318",
-        "src/url/url.controller.ts:1747"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "angle-instanced-arrays": {
-      "count": 4,
-      "samples": [
-        "src/url/url.controller.ts:598",
-        "src/url/url.controller.ts:2027",
-        "src/url/url.controller.ts:3266",
-        "src/url/url.controller.ts:5418"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "beforeinstallprompt": {
-      "count": 7,
-      "samples": [
-        "src/url/url.controller.ts:750",
-        "src/url/url.controller.ts:2181",
-        "src/url/url.controller.ts:3422",
-        "src/url/url.controller.ts:4337",
-        "src/url/url.controller.ts:5742"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "csp": {
-      "count": 20,
-      "samples": [
-        "src/url/url.controller.ts:801",
-        "src/url/url.controller.ts:860",
-        "src/url/url.controller.ts:1037",
-        "src/url/url.controller.ts:1092",
-        "src/url/url.controller.ts:2232"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "clear-site-data": {
-      "count": 10,
-      "samples": [
-        "src/url/url.controller.ts:1176",
-        "src/url/url.controller.ts:2607",
-        "src/url/url.controller.ts:3848",
-        "src/url/url.controller.ts:4763",
-        "src/url/url.controller.ts:6012"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "reason": "status:low"
-      }
-    },
-    "fetch-metadata": {
-      "count": 2,
-      "samples": [
-        "src/url/url.controller.ts:5507",
-        "src/url/url.controller.ts:5598"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "reason": "status:low"
-      }
-    },
-    "data-urls": {
-      "count": 1,
-      "samples": [
-        "src/url/url.controller.ts:6292"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "virtual-keyboard": {
-      "count": 1,
-      "samples": [
-        "src/url/url.model.ts:729"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "device-posture": {
-      "count": 2,
-      "samples": [
-        "src/url/url.routes.ts:204",
-        "src/url/url.routes.ts:320"
-      ],
-      "baseline": {
-        "inBaseline": false,
-        "achieved": "none",
-        "reason": "status:false"
-      }
-    },
-    "canvas-createconicgradient": {
-      "count": 1,
-      "samples": [
-        "src/url/url.service.ts:671"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "reason": "status:low"
-      }
-    },
-    "webrtc-stats": {
-      "count": 3,
-      "samples": [
-        "src/url/url.service.ts:2864",
-        "src/url/url.service.ts:4520",
-        "src/url/url.service.ts:4649"
-      ],
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      }
-    },
-    "array-find": {
-      "count": 1,
-      "samples": [
-        "src/url/url.service.ts:3371"
+        "src/common/component/UrlForm.tsx:1513",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:2302"
       ],
       "baseline": {
         "inBaseline": true,
@@ -526,5 +57,5 @@
       }
     }
   },
-  "generatedAt": "2025-09-20T11:03:20.988Z"
+  "generatedAt": "2025-09-26T12:28:29.398Z"
 }

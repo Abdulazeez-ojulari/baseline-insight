@@ -36,7 +36,7 @@ program
           // console.log('dfgerre')
           const token = m[1];
           // match token to a feature in web-features
-          const featureKey = core.findFeature(token) ?? core.findFeature(token.split(".").slice(-1)[0]);
+          const featureKey = core.findFeature(token);
           console.log(featureKey, token)
           if (featureKey) {
             if (!found[featureKey]) found[featureKey] = { count: 0, samples: [], baseline: null };
@@ -49,8 +49,8 @@ program
       }
     }
 
-    console.log(found)
-    console.log(entries)
+    // console.log(found)
+    // console.log(entries)
     for (const key of Object.keys(found)) {
       console.log(key)
       const info = core.isFeatureInBaseline(key, opts.year);
