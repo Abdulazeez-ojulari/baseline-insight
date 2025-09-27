@@ -1,6 +1,6 @@
 {
   "scannedFiles": 61,
-  "baselineYear": "2023",
+  "baselineYear": "2025",
   "features": {
     "html": {
       "count": 2,
@@ -1872,5 +1872,5 @@
       }
     }
   },
-  "generatedAt": "2025-09-27T01:25:35.196Z"
+  "generatedAt": "2025-09-27T06:35:32.659Z"
 }

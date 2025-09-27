@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "satoshi-medium";
+  src: url("./assets/fonts/Satoshi-Medium.otf");
+}
+
+@font-face {
+  font-family: "satoshi-regular";
+  src: url("./assets/fonts/Satoshi-Regular.otf");
+}
+
+@font-face {
+  font-family: "satoshi-bold";
+  src: url("./assets/fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: "satoshi-light";
+  src: url("./assets/fonts/Satoshi-Light.otf");
+}
+
+body {
+  font-family: "satoshi-regular";
+  margin: 0; /* Reset default margin to ensure full coverage */
+  padding: 0; /* Reset default padding to ensure full coverage */
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+.leavesAnime {
+  animation: float 6s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eef2f8;
+  display: none;
+}
+
+::-webkit-scrollbar-track:hover {
+  display: block;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #102e34;
+  border-radius: 12px;
+  display: block;
+}
