@@ -1,61 +1,1876 @@
 {
-  "scannedFiles": 59,
+  "scannedFiles": 61,
   "baselineYear": "2023",
   "features": {
-    "dom": {
-      "count": 5,
+    "html": {
+      "count": 2,
+      "featureId": "html",
       "samples": [
-        "src/index.tsx:201",
-        "src/main.tsx:234",
-        "src/views/decode/Decode.tsx:177",
-        "src/views/home/Home.tsx:186",
-        "src/views/statistic/Statistic.tsx:276"
+        "index.html",
+        "public/index.html"
       ],
+      "info": {
+        "name": "<html>",
+        "description": "The <html> element represents the top-level of an HTML document and is referred to as the root element.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLHtmlElement",
+          "html.elements.html"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/semantics.html#the-html-element"
+        ]
+      },
       "baseline": {
         "inBaseline": true,
         "achieved": "high",
         "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "head": {
+      "count": 2,
+      "featureId": "head",
+      "samples": [
+        "index.html",
+        "public/index.html"
+      ],
+      "info": {
+        "name": "<head>",
+        "description": "The <head> element contains machine-readable information (metadata) about the document, such as the title, <script> and <style> elements, and <meta> elements.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLHeadElement",
+          "html.elements.head"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/semantics.html#the-head-element"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "meta": {
+      "count": 6,
+      "featureId": "meta",
+      "samples": [
+        "index.html",
+        "index.html",
+        "public/index.html",
+        "public/index.html",
+        "public/index.html"
+      ],
+      "info": {
+        "name": "<meta>",
+        "description": "The <meta> element represents metadata about the page used by the browser or search engines, including description, keywords, and character sets.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLMetaElement",
+          "api.HTMLMetaElement.content",
+          "api.HTMLMetaElement.httpEquiv",
+          "api.HTMLMetaElement.media",
+          "api.HTMLMetaElement.name",
+          "html.elements.meta",
+          "html.elements.meta.charset",
+          "html.elements.meta.content",
+          "html.elements.meta.http-equiv",
+          "html.elements.meta.http-equiv.content-type",
+          "html.elements.meta.http-equiv.refresh",
+          "html.elements.meta.name",
+          "html.elements.meta.name.referrer"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/semantics.html#meta"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "link": {
+      "count": 4,
+      "featureId": "link",
+      "samples": [
+        "index.html",
+        "public/index.html",
+        "public/index.html",
+        "public/index.html"
+      ],
+      "info": {
+        "name": "<link>",
+        "description": "The <link> element creates a relationship between the current document and an external resource, such as a stylesheet or favicon.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLLinkElement",
+          "api.HTMLLinkElement.as",
+          "api.HTMLLinkElement.crossOrigin",
+          "api.HTMLLinkElement.disabled",
+          "api.HTMLLinkElement.href",
+          "api.HTMLLinkElement.hreflang",
+          "api.HTMLLinkElement.integrity",
+          "api.HTMLLinkElement.media",
+          "api.HTMLLinkElement.rel",
+          "api.HTMLLinkElement.relList",
+          "api.HTMLLinkElement.sizes",
+          "api.HTMLLinkElement.type",
+          "html.elements.link",
+          "html.elements.link.as",
+          "html.elements.link.crossorigin",
+          "html.elements.link.disabled",
+          "html.elements.link.href",
+          "html.elements.link.hreflang",
+          "html.elements.link.integrity",
+          "html.elements.link.media",
+          "html.elements.link.rel",
+          "html.elements.link.sizes",
+          "html.elements.link.type"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/semantics.html#the-link-element"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "≤4",
+        "safari_ios": "≤3.2"
+      }
+    },
+    "title": {
+      "count": 2,
+      "featureId": "title",
+      "samples": [
+        "index.html",
+        "public/index.html"
+      ],
+      "info": {
+        "name": "<title>",
+        "description": "The <title> element sets the title of the document and exposes it to users via the UI of the browser or app they're using and through assistive technology.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLTitleElement",
+          "api.HTMLTitleElement.text",
+          "html.elements.title"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "body": {
+      "count": 2,
+      "featureId": "body",
+      "samples": [
+        "index.html",
+        "public/index.html"
+      ],
+      "info": {
+        "name": "<body>",
+        "description": "The <body> element represents the content of an HTML document.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLBodyElement",
+          "html.elements.body"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/sections.html#the-body-element"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "3",
+        "safari_ios": "1"
+      }
+    },
+    "div": {
+      "count": 2,
+      "featureId": "div",
+      "samples": [
+        "index.html",
+        "public/index.html"
+      ],
+      "info": {
+        "name": "<div>",
+        "description": "The <div> HTML element is the generic container for content.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLDivElement",
+          "html.elements.div"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "script": {
+      "count": 2,
+      "featureId": "script",
+      "samples": [
+        "index.html",
+        "public/index.html"
+      ],
+      "info": {
+        "name": "<script> and <noscript>",
+        "description": "The <script> element contains or loads data or executable code. This is typically used to load JavaScript code. The <noscript> element represents alternative content to show when scripting is not allowed.",
+        "caniuse": null,
+        "compat_features": [
+          "api.HTMLScriptElement",
+          "api.HTMLScriptElement.async",
+          "api.HTMLScriptElement.crossOrigin",
+          "api.HTMLScriptElement.defer",
+          "api.HTMLScriptElement.integrity",
+          "api.HTMLScriptElement.src",
+          "api.HTMLScriptElement.supports_static",
+          "api.HTMLScriptElement.text",
+          "api.HTMLScriptElement.type",
+          "html.elements.noscript",
+          "html.elements.script",
+          "html.elements.script.async",
+          "html.elements.script.crossorigin",
+          "html.elements.script.defer",
+          "html.elements.script.integrity",
+          "html.elements.script.src",
+          "html.elements.script.type"
+        ],
+        "group": [
+          "html-elements"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/scripting.html#script"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "3",
+        "safari_ios": "2"
+      }
+    },
+    "text-align": {
+      "count": 1,
+      "featureId": "text-align",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "text-align",
+        "description": "The text-align CSS property sets the horizontal placement of the inner content of a block element.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.text-align",
+          "css.properties.text-align.center",
+          "css.properties.text-align.end",
+          "css.properties.text-align.justify",
+          "css.properties.text-align.left",
+          "css.properties.text-align.match-parent",
+          "css.properties.text-align.right",
+          "css.properties.text-align.start"
+        ],
+        "group": [
+          "text"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-text-4/#text-align-property"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "width-height": {
+      "count": 1,
+      "featureId": "width-height",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "Width and height",
+        "description": "The width and height CSS properties set the preferred physical size of an element.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.height",
+          "css.properties.height.auto",
+          "css.properties.width",
+          "css.properties.width.auto",
+          "css.properties.width.is_animatable",
+          "css.types.dimension",
+          "css.types.length",
+          "css.types.length-percentage",
+          "css.types.percentage"
+        ],
+        "group": [
+          "layout"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-sizing-3/#preferred-size-properties"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "pointer-events": {
+      "count": 1,
+      "featureId": "pointer-events",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "pointer-events",
+        "description": "The pointer-events CSS property sets whether a user can interact with an element using a mouse, touch, or other pointing input device.",
+        "caniuse": [
+          "pointer-events"
+        ],
+        "compat_features": [
+          "css.properties.pointer-events",
+          "css.properties.pointer-events.html_elements"
+        ],
+        "group": [
+          "css"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-ui-4/#pointer-events-control"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "2",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "3.6",
+        "firefox_android": "4",
+        "safari": "4",
+        "safari_ios": "3.2"
+      }
+    },
+    "animations-css": {
+      "count": 2,
+      "featureId": "animations-css",
+      "samples": [
+        "src/App.css",
+        "src/App.css"
+      ],
+      "info": {
+        "name": "Animations (CSS)",
+        "description": "The animation CSS property animates an element's style over time, using keyframes described in @keyframes rules.",
+        "caniuse": [
+          "css-animation"
+        ],
+        "compat_features": [
+          "api.AnimationEvent",
+          "api.AnimationEvent.AnimationEvent",
+          "api.AnimationEvent.animationName",
+          "api.AnimationEvent.elapsedTime",
+          "api.AnimationEvent.pseudoElement",
+          "api.CSSAnimation",
+          "api.CSSAnimation.animationName",
+          "api.CSSKeyframeRule",
+          "api.CSSKeyframeRule.keyText",
+          "api.CSSKeyframeRule.style",
+          "api.CSSKeyframesRule",
+          "api.CSSKeyframesRule.appendRule",
+          "api.CSSKeyframesRule.cssRules",
+          "api.CSSKeyframesRule.deleteRule",
+          "api.CSSKeyframesRule.findRule",
+          "api.CSSKeyframesRule.length",
+          "api.CSSKeyframesRule.name",
+          "css.at-rules.keyframes",
+          "css.at-rules.keyframes.ignore_important_declarations",
+          "css.at-rules.keyframes.named_range_keyframes",
+          "css.properties.animation",
+          "css.properties.animation-delay",
+          "css.properties.animation-direction",
+          "css.properties.animation-direction.alternate",
+          "css.properties.animation-direction.alternate-reverse",
+          "css.properties.animation-direction.normal",
+          "css.properties.animation-direction.reverse",
+          "css.properties.animation-duration",
+          "css.properties.animation-duration.auto",
+          "css.properties.animation-fill-mode",
+          "css.properties.animation-fill-mode.backwards",
+          "css.properties.animation-fill-mode.both",
+          "css.properties.animation-fill-mode.forwards",
+          "css.properties.animation-fill-mode.none",
+          "css.properties.animation-iteration-count",
+          "css.properties.animation-iteration-count.infinite",
+          "css.properties.animation-name",
+          "css.properties.animation-name.none",
+          "css.properties.animation-play-state",
+          "css.properties.animation-play-state.paused",
+          "css.properties.animation-play-state.running",
+          "css.properties.animation-timing-function",
+          "css.properties.animation-timing-function.jump",
+          "css.types.time"
+        ],
+        "group": [
+          "animation",
+          "css"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-animations-2/"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "43",
+        "chrome_android": "43",
+        "edge": "12",
+        "firefox": "16",
+        "firefox_android": "16",
+        "safari": "9",
+        "safari_ios": "9"
+      }
+    },
+    "background-color": {
+      "count": 1,
+      "featureId": "background-color",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "background-color",
+        "description": "The background-color CSS property sets the fill color of an element, behind any content and background images or gradients.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.background-color"
+        ],
+        "group": [
+          "background"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-backgrounds-3/#background-color"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "min-max-width-height": {
+      "count": 1,
+      "featureId": "min-max-width-height",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "Min and max width and height",
+        "description": "The min-width, min-height, max-width, and max-height CSS properties set the minimum and maximum size of an element.",
+        "caniuse": [
+          "minmaxwh"
+        ],
+        "compat_features": [
+          "css.properties.max-height",
+          "css.properties.max-height.none",
+          "css.properties.max-width",
+          "css.properties.max-width.none",
+          "css.properties.min-height",
+          "css.properties.min-height.auto",
+          "css.properties.min-width",
+          "css.properties.min-width.auto"
+        ],
+        "group": null,
+        "spec": [
+          "https://drafts.csswg.org/css-sizing-3/#min-size-properties",
+          "https://drafts.csswg.org/css-sizing-3/#max-size-properties"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "18",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1.3",
+        "safari_ios": "1"
+      }
+    },
+    "display": {
+      "count": 1,
+      "featureId": "display",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "Display",
+        "description": "The display CSS property sets the display behavior of an element's box within its layout and sets the layout behavior for its child elements.",
+        "caniuse": [
+          "inline-block"
+        ],
+        "compat_features": [
+          "css.properties.display",
+          "css.properties.display.block",
+          "css.properties.display.inline",
+          "css.properties.display.inline-block",
+          "css.properties.display.none",
+          "css.properties.display.none.option_is_hidden"
+        ],
+        "group": [
+          "css"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-display-3/#the-display-properties"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "flexbox": {
+      "count": 3,
+      "featureId": "flexbox",
+      "samples": [
+        "src/App.css",
+        "src/App.css",
+        "src/App.css"
+      ],
+      "info": {
+        "name": "Flexbox",
+        "description": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
+        "caniuse": [
+          "flexbox"
+        ],
+        "compat_features": [
+          "css.properties.align-content",
+          "css.properties.align-content.flex_context",
+          "css.properties.align-content.flex_context.baseline",
+          "css.properties.align-content.flex_context.first_baseline",
+          "css.properties.align-content.flex_context.last_baseline",
+          "css.properties.align-content.flex_context.safe_unsafe",
+          "css.properties.align-content.flex_context.space-evenly",
+          "css.properties.align-content.flex_context.start_end",
+          "css.properties.align-content.flex_context.stretch",
+          "css.properties.align-content.normal",
+          "css.properties.align-items",
+          "css.properties.align-items.flex_context",
+          "css.properties.align-items.flex_context.baseline",
+          "css.properties.align-items.flex_context.first_baseline",
+          "css.properties.align-items.flex_context.last_baseline",
+          "css.properties.align-items.flex_context.safe_unsafe",
+          "css.properties.align-items.flex_context.start_end",
+          "css.properties.align-self",
+          "css.properties.align-self.auto",
+          "css.properties.align-self.flex_context",
+          "css.properties.align-self.flex_context.baseline",
+          "css.properties.align-self.flex_context.first_baseline",
+          "css.properties.align-self.flex_context.last_baseline",
+          "css.properties.align-self.flex_context.safe_unsafe",
+          "css.properties.align-self.flex_context.start_end",
+          "css.properties.align-self.flex_context.stretch",
+          "css.properties.align-self.normal",
+          "css.properties.align-self.stretch",
+          "css.properties.display.flex",
+          "css.properties.display.inline-flex",
+          "css.properties.flex",
+          "css.properties.flex-basis",
+          "css.properties.flex-basis.auto",
+          "css.properties.flex-basis.content",
+          "css.properties.flex-basis.fit-content",
+          "css.properties.flex-basis.max-content",
+          "css.properties.flex-basis.min-content",
+          "css.properties.flex-direction",
+          "css.properties.flex-direction.column",
+          "css.properties.flex-direction.column-reverse",
+          "css.properties.flex-direction.row",
+          "css.properties.flex-direction.row-reverse",
+          "css.properties.flex-flow",
+          "css.properties.flex-grow",
+          "css.properties.flex-grow.less_than_zero_animate",
+          "css.properties.flex-shrink",
+          "css.properties.flex-wrap",
+          "css.properties.flex-wrap.nowrap",
+          "css.properties.flex-wrap.wrap",
+          "css.properties.flex-wrap.wrap-reverse",
+          "css.properties.flex.none",
+          "css.properties.justify-content",
+          "css.properties.justify-content.flex_context",
+          "css.properties.justify-content.flex_context.left_right",
+          "css.properties.justify-content.flex_context.safe_unsafe",
+          "css.properties.justify-content.flex_context.space-evenly",
+          "css.properties.justify-content.flex_context.start_end",
+          "css.properties.justify-content.flex_context.stretch",
+          "css.properties.justify-content.left",
+          "css.properties.justify-content.normal",
+          "css.properties.justify-content.right",
+          "css.properties.justify-items",
+          "css.properties.justify-items.flex_context",
+          "css.properties.justify-items.left",
+          "css.properties.justify-items.legacy",
+          "css.properties.justify-items.right",
+          "css.properties.order",
+          "css.properties.place-content",
+          "css.properties.place-content.flex_context",
+          "css.properties.place-items",
+          "css.properties.place-items.flex_context",
+          "css.properties.place-self",
+          "css.properties.place-self.flex_context",
+          "css.properties.position.absolutely_positioned_flex_children"
+        ],
+        "group": [
+          "flexbox"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-flexbox-1/"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "29",
+        "chrome_android": "29",
+        "edge": "12",
+        "firefox": "20",
+        "firefox_android": "20",
+        "safari": "9",
+        "safari_ios": "9"
+      }
+    },
+    "font-size": {
+      "count": 1,
+      "featureId": "font-size",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "font-size",
+        "description": "The font-size CSS property sets the text height.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.font-size",
+          "css.properties.font-size.rem_values",
+          "css.properties.font-size.xxx-large",
+          "svg.global_attributes.font-size"
+        ],
+        "group": [
+          "fonts"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-fonts-4/#font-size-prop"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "color": {
+      "count": 2,
+      "featureId": "color",
+      "samples": [
+        "src/App.css",
+        "src/App.css"
+      ],
+      "info": {
+        "name": "Color",
+        "description": "The color CSS property sets the primary foreground color of an element, which is used for text, the default border color, and text decorations.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.color",
+          "css.types.color"
+        ],
+        "group": [
+          "css"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-color-4/#the-color-property"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "transforms2d": {
+      "count": 2,
+      "featureId": "transforms2d",
+      "samples": [
+        "src/App.css",
+        "src/App.css"
+      ],
+      "info": {
+        "name": "2D transforms",
+        "description": "The transform CSS property and its 2D transform functions allow rotating, scaling, skewing, and translating an element. Arbitrary 2D transforms are also possible using a transformation matrix.",
+        "caniuse": [
+          "transforms2d"
+        ],
+        "compat_features": [
+          "css.properties.transform",
+          "css.properties.transform-origin",
+          "css.properties.transform-origin.bottom",
+          "css.properties.transform-origin.center",
+          "css.properties.transform-origin.left",
+          "css.properties.transform-origin.right",
+          "css.properties.transform-origin.three_value_syntax",
+          "css.properties.transform-origin.top",
+          "css.types.angle",
+          "css.types.angle-percentage",
+          "css.types.angle.deg",
+          "css.types.angle.grad",
+          "css.types.angle.rad",
+          "css.types.angle.turn",
+          "css.types.position",
+          "css.types.position.four_value_syntax",
+          "css.types.position.keyword_value_syntax",
+          "css.types.transform-function",
+          "css.types.transform-function.matrix",
+          "css.types.transform-function.rotate",
+          "css.types.transform-function.scale",
+          "css.types.transform-function.scaleX",
+          "css.types.transform-function.scaleY",
+          "css.types.transform-function.skew",
+          "css.types.transform-function.skewX",
+          "css.types.transform-function.skewY",
+          "css.types.transform-function.translate",
+          "css.types.transform-function.translateX",
+          "css.types.transform-function.translateY"
+        ],
+        "group": [
+          "transforms"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-transforms-1/"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "36",
+        "chrome_android": "36",
+        "edge": "12",
+        "firefox": "16",
+        "firefox_android": "16",
+        "safari": "9",
+        "safari_ios": "9"
+      }
+    },
+    "media-queries": {
+      "count": 1,
+      "featureId": "media-queries",
+      "samples": [
+        "src/App.css"
+      ],
+      "info": {
+        "name": "Media queries",
+        "description": "The @media CSS rule conditionally applies styles based on the output device type, its capabilities, and the user's preferences. Media queries are composed of an optional media type such as screen or print, and one or more mandatory media features, such as prefers-reduced-animations.",
+        "caniuse": [
+          "css-mediaqueries"
+        ],
+        "compat_features": [
+          "css.at-rules.media",
+          "css.at-rules.media.aspect-ratio",
+          "css.at-rules.media.calc",
+          "css.at-rules.media.color",
+          "css.at-rules.media.color-index",
+          "css.at-rules.media.grid",
+          "css.at-rules.media.height",
+          "css.at-rules.media.media_features",
+          "css.at-rules.media.media_query_values",
+          "css.at-rules.media.monochrome",
+          "css.at-rules.media.nested-queries",
+          "css.at-rules.media.or_syntax",
+          "css.at-rules.media.orientation",
+          "css.at-rules.media.width",
+          "css.types.ratio",
+          "css.types.ratio.number_value"
+        ],
+        "group": [
+          "media-queries"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/mediaqueries-5/"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "3",
+        "safari_ios": "1"
+      }
+    },
+    "font-family": {
+      "count": 6,
+      "featureId": "font-family",
+      "samples": [
+        "src/index.css",
+        "src/index.css",
+        "src/index.css",
+        "src/index.css",
+        "src/index.css"
+      ],
+      "info": {
+        "name": "font-family",
+        "description": "The font-family CSS property sets the desired font face for text, along with optional fallback font faces.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.font-family",
+          "svg.global_attributes.font-family"
+        ],
+        "group": [
+          "fonts"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-fonts-4/#font-family-prop"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "margin": {
+      "count": 1,
+      "featureId": "margin",
+      "samples": [
+        "src/index.css"
+      ],
+      "info": {
+        "name": "margin",
+        "description": "The margin CSS property sets space around an element. It is a shorthand for margin-top, margin-right, margin-bottom, and margin-left.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.margin",
+          "css.properties.margin-bottom",
+          "css.properties.margin-bottom.auto",
+          "css.properties.margin-left",
+          "css.properties.margin-left.auto",
+          "css.properties.margin-right",
+          "css.properties.margin-right.auto",
+          "css.properties.margin-top",
+          "css.properties.margin-top.auto",
+          "css.properties.margin.auto"
+        ],
+        "group": [
+          "layout"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-box-4/#margins"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "padding": {
+      "count": 1,
+      "featureId": "padding",
+      "samples": [
+        "src/index.css"
+      ],
+      "info": {
+        "name": "padding",
+        "description": "The padding CSS property sets space between an element's edge and its contents. It is a shorthand for padding-top, padding-right, padding-bottom, and padding-left.",
+        "caniuse": null,
+        "compat_features": [
+          "css.properties.padding",
+          "css.properties.padding-bottom",
+          "css.properties.padding-left",
+          "css.properties.padding-right",
+          "css.properties.padding-top"
+        ],
+        "group": [
+          "layout"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-box-4/#paddings"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "background": {
+      "count": 1,
+      "featureId": "background",
+      "samples": [
+        "src/index.css"
+      ],
+      "info": {
+        "name": "background",
+        "description": "The background CSS property is a shorthand that sets several background properties at once.",
+        "caniuse": [
+          "multibackgrounds"
+        ],
+        "compat_features": [
+          "css.properties.background",
+          "css.properties.background.multiple_backgrounds"
+        ],
+        "group": [
+          "background"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-backgrounds-3/#background"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "3.6",
+        "firefox_android": "4",
+        "safari": "1.3",
+        "safari_ios": "1"
+      }
+    },
+    "text-stroke-fill": {
+      "count": 1,
+      "featureId": "text-stroke-fill",
+      "samples": [
+        "src/index.css"
+      ],
+      "info": {
+        "name": "Text stroke and fill  (compatibility prefixes)",
+        "description": "The -webkit-text-stroke-width and -webkit-text-stroke-color CSS properties set the thickness and color of text outlines. The -webkit-text-fill-color sets the color within text character outlines. Both default to the text color.",
+        "caniuse": [
+          "text-stroke"
+        ],
+        "compat_features": [
+          "css.properties.-webkit-text-fill-color",
+          "css.properties.-webkit-text-stroke",
+          "css.properties.-webkit-text-stroke-color",
+          "css.properties.-webkit-text-stroke-width"
+        ],
+        "group": [
+          "css"
+        ],
+        "spec": [
+          "https://compat.spec.whatwg.org/#text-fill-and-stroking"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "4",
+        "chrome_android": "18",
+        "edge": "15",
+        "firefox": "49",
+        "firefox_android": "49",
+        "safari": "3",
+        "safari_ios": "2"
+      }
+    },
+    "import": {
+      "count": 3,
+      "featureId": "import",
+      "samples": [
+        "src/index.css",
+        "src/index.css",
+        "src/index.css"
+      ],
+      "info": {
+        "name": "@import",
+        "description": "The @import CSS at-rule loads styles from another stylesheet.",
+        "caniuse": null,
+        "compat_features": [
+          "api.CSSImportRule",
+          "api.CSSImportRule.href",
+          "api.CSSImportRule.media",
+          "api.CSSImportRule.styleSheet",
+          "css.at-rules.import"
+        ],
+        "group": [
+          "css"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-cascade-5/#at-import"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
+      }
+    },
+    "font-face": {
+      "count": 4,
+      "featureId": "font-face",
+      "samples": [
+        "src/index.css",
+        "src/index.css",
+        "src/index.css",
+        "src/index.css"
+      ],
+      "info": {
+        "name": "@font-face",
+        "description": "The @font-face CSS at-rule creates a custom font-family value. The at-rule's descriptors set the font's name, source, and various display settings.",
+        "caniuse": [
+          "fontface",
+          "font-unicode-range"
+        ],
+        "compat_features": [
+          "api.CSSFontFaceRule",
+          "api.CSSFontFaceRule.style",
+          "css.at-rules.font-face",
+          "css.at-rules.font-face.OpenType_CBDT_CBLC",
+          "css.at-rules.font-face.OpenType_SBIX",
+          "css.at-rules.font-face.WOFF",
+          "css.at-rules.font-face.WOFF_2",
+          "css.at-rules.font-face.font-family",
+          "css.at-rules.font-face.src",
+          "css.at-rules.font-face.src.drop_invalid_item",
+          "css.at-rules.font-face.src.format_keyword",
+          "css.at-rules.font-face.src.format_variations",
+          "css.at-rules.font-face.src.tech_keyword",
+          "css.at-rules.font-face.unicode-range",
+          "css.types.url"
+        ],
+        "group": [
+          "fonts"
+        ],
+        "spec": [
+          "https://drafts.csswg.org/css-fonts-5/#font-face-rule"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "36",
+        "chrome_android": "36",
+        "edge": "14",
+        "firefox": "39",
+        "firefox_android": "39",
+        "safari": "10",
+        "safari_ios": "10"
+      }
+    },
+    "dom": {
+      "count": 5,
+      "featureId": "dom",
+      "samples": [
+        "src/index.tsx",
+        "src/main.tsx",
+        "src/views/decode/Decode.tsx",
+        "src/views/home/Home.tsx",
+        "src/views/statistic/Statistic.tsx"
+      ],
+      "info": {
+        "name": "DOM",
+        "description": "The DOM (Document Object Model) API represents HTML and XML documents as trees of nodes. You can use the API to inspect and modify the structure and content of a document.",
+        "caniuse": null,
+        "compat_features": [
+          "api.Attr",
+          "api.Attr.localName",
+          "api.Attr.name",
+          "api.Attr.namespaceURI",
+          "api.Attr.ownerElement",
+          "api.Attr.prefix",
+          "api.Attr.value",
+          "api.CDATASection",
+          "api.CharacterData",
+          "api.CharacterData.after",
+          "api.CharacterData.appendData",
+          "api.CharacterData.before",
+          "api.CharacterData.data",
+          "api.CharacterData.deleteData",
+          "api.CharacterData.insertData",
+          "api.CharacterData.length",
+          "api.CharacterData.nextElementSibling",
+          "api.CharacterData.previousElementSibling",
+          "api.CharacterData.remove",
+          "api.CharacterData.replaceData",
+          "api.CharacterData.replaceWith",
+          "api.CharacterData.substringData",
+          "api.Comment",
+          "api.Comment.Comment",
+          "api.DOMException",
+          "api.DOMException.DOMException",
+          "api.DOMException.message",
+          "api.DOMException.name",
+          "api.DOMImplementation",
+          "api.DOMImplementation.createDocument",
+          "api.DOMImplementation.createDocumentType",
+          "api.DOMImplementation.createHTMLDocument",
+          "api.DOMStringList",
+          "api.DOMStringList.contains",
+          "api.DOMStringList.item",
+          "api.DOMStringList.length",
+          "api.DOMTokenList",
+          "api.DOMTokenList.@@iterator",
+          "api.DOMTokenList.add",
+          "api.DOMTokenList.add.multiple_parameters",
+          "api.DOMTokenList.contains",
+          "api.DOMTokenList.entries",
+          "api.DOMTokenList.forEach",
+          "api.DOMTokenList.item",
+          "api.DOMTokenList.keys",
+          "api.DOMTokenList.length",
+          "api.DOMTokenList.remove",
+          "api.DOMTokenList.remove.multiple_parameters",
+          "api.DOMTokenList.remove_duplicates",
+          "api.DOMTokenList.replace",
+          "api.DOMTokenList.replace.boolean_value",
+          "api.DOMTokenList.supports",
+          "api.DOMTokenList.toString",
+          "api.DOMTokenList.toggle",
+          "api.DOMTokenList.toggle.force_parameter",
+          "api.DOMTokenList.trim_whitespace",
+          "api.DOMTokenList.value",
+          "api.DOMTokenList.values",
+          "api.Document",
+          "api.Document.DOMContentLoaded_event",
+          "api.Document.Document",
+          "api.Document.URL",
+          "api.Document.activeElement",
+          "api.Document.adoptNode",
+          "api.Document.append",
+          "api.Document.body",
+          "api.Document.characterSet",
+          "api.Document.childElementCount",
+          "api.Document.children",
+          "api.Document.compatMode",
+          "api.Document.contentType",
+          "api.Document.createAttribute",
+          "api.Document.createAttributeNS",
+          "api.Document.createCDATASection",
+          "api.Document.createComment",
+          "api.Document.createDocumentFragment",
+          "api.Document.createElement",
+          "api.Document.createElement.options_parameter",
+          "api.Document.createElementNS",
+          "api.Document.createElementNS.options_parameter",
+          "api.Document.createNodeIterator",
+          "api.Document.createProcessingInstruction",
+          "api.Document.createTextNode",
+          "api.Document.createTreeWalker",
+          "api.Document.createTreeWalker.whatToShow_filter_parameters_optional",
+          "api.Document.currentScript",
+          "api.Document.defaultView",
+          "api.Document.dir",
+          "api.Document.doctype",
+          "api.Document.documentElement",
+          "api.Document.documentURI",
+          "api.Document.embeds",
+          "api.Document.firstElementChild",
+          "api.Document.forms",
+          "api.Document.getElementById",
+          "api.Document.getElementsByClassName",
+          "api.Document.getElementsByName",
+          "api.Document.getElementsByTagName",
+          "api.Document.getElementsByTagNameNS",
+          "api.Document.hasFocus",
+          "api.Document.head",
+          "api.Document.images",
+          "api.Document.implementation",
+          "api.Document.importNode",
+          "api.Document.lastElementChild",
+          "api.Document.lastModified",
+          "api.Document.links",
+          "api.Document.plugins",
+          "api.Document.prepend",
+          "api.Document.querySelector",
+          "api.Document.querySelectorAll",
+          "api.Document.readyState",
+          "api.Document.readystatechange_event",
+          "api.Document.referrer",
+          "api.Document.replaceChildren",
+          "api.Document.scripts",
+          "api.Document.title",
+          "api.DocumentFragment",
+          "api.DocumentFragment.DocumentFragment",
+          "api.DocumentFragment.append",
+          "api.DocumentFragment.childElementCount",
+          "api.DocumentFragment.children",
+          "api.DocumentFragment.firstElementChild",
+          "api.DocumentFragment.getElementById",
+          "api.DocumentFragment.lastElementChild",
+          "api.DocumentFragment.prepend",
+          "api.DocumentFragment.querySelector",
+          "api.DocumentFragment.querySelectorAll",
+          "api.DocumentFragment.replaceChildren",
+          "api.DocumentType",
+          "api.DocumentType.after",
+          "api.DocumentType.before",
+          "api.DocumentType.name",
+          "api.DocumentType.publicId",
+          "api.DocumentType.remove",
+          "api.DocumentType.replaceWith",
+          "api.DocumentType.systemId",
+          "api.Element",
+          "api.Element.after",
+          "api.Element.append",
+          "api.Element.attributes",
+          "api.Element.before",
+          "api.Element.childElementCount",
+          "api.Element.children",
+          "api.Element.classList",
+          "api.Element.className",
+          "api.Element.clientHeight",
+          "api.Element.clientLeft",
+          "api.Element.clientTop",
+          "api.Element.clientWidth",
+          "api.Element.closest",
+          "api.Element.currentCSSZoom",
+          "api.Element.firstElementChild",
+          "api.Element.getAttribute",
+          "api.Element.getAttributeNS",
+          "api.Element.getAttributeNames",
+          "api.Element.getAttributeNode",
+          "api.Element.getAttributeNodeNS",
+          "api.Element.getBoundingClientRect",
+          "api.Element.getClientRects",
+          "api.Element.getElementsByClassName",
+          "api.Element.getElementsByTagName",
+          "api.Element.getElementsByTagName.all_elements_selector",
+          "api.Element.getElementsByTagNameNS",
+          "api.Element.getElementsByTagNameNS.all_elements_selector",
+          "api.Element.hasAttribute",
+          "api.Element.hasAttributeNS",
+          "api.Element.hasAttributes",
+          "api.Element.id",
+          "api.Element.innerHTML",
+          "api.Element.insertAdjacentElement",
+          "api.Element.insertAdjacentHTML",
+          "api.Element.insertAdjacentText",
+          "api.Element.lastElementChild",
+          "api.Element.localName",
+          "api.Element.matches",
+          "api.Element.namespaceURI",
+          "api.Element.nextElementSibling",
+          "api.Element.outerHTML",
+          "api.Element.prefix",
+          "api.Element.prepend",
+          "api.Element.previousElementSibling",
+          "api.Element.querySelector",
+          "api.Element.querySelectorAll",
+          "api.Element.remove",
+          "api.Element.removeAttribute",
+          "api.Element.removeAttributeNS",
+          "api.Element.removeAttributeNode",
+          "api.Element.replaceChildren",
+          "api.Element.replaceWith",
+          "api.Element.setAttribute",
+          "api.Element.setAttributeNS",
+          "api.Element.setAttributeNode",
+          "api.Element.setAttributeNodeNS",
+          "api.Element.tagName",
+          "api.Element.toggleAttribute",
+          "api.HTMLCollection",
+          "api.HTMLCollection.item",
+          "api.HTMLCollection.length",
+          "api.HTMLCollection.namedItem",
+          "api.HTMLDocument",
+          "api.HTMLElement",
+          "api.HTMLElement.dir",
+          "api.HTMLElement.hidden",
+          "api.HTMLElement.innerText",
+          "api.HTMLElement.load_event",
+          "api.HTMLElement.offsetHeight",
+          "api.HTMLElement.offsetLeft",
+          "api.HTMLElement.offsetParent",
+          "api.HTMLElement.offsetTop",
+          "api.HTMLElement.offsetWidth",
+          "api.HTMLElement.outerText",
+          "api.NamedNodeMap",
+          "api.NamedNodeMap.getNamedItem",
+          "api.NamedNodeMap.getNamedItemNS",
+          "api.NamedNodeMap.item",
+          "api.NamedNodeMap.length",
+          "api.NamedNodeMap.removeNamedItem",
+          "api.NamedNodeMap.removeNamedItemNS",
+          "api.NamedNodeMap.setNamedItem",
+          "api.NamedNodeMap.setNamedItemNS",
+          "api.Node",
+          "api.Node.appendChild",
+          "api.Node.baseURI",
+          "api.Node.childNodes",
+          "api.Node.cloneNode",
+          "api.Node.compareDocumentPosition",
+          "api.Node.contains",
+          "api.Node.firstChild",
+          "api.Node.hasChildNodes",
+          "api.Node.insertBefore",
+          "api.Node.isDefaultNamespace",
+          "api.Node.isEqualNode",
+          "api.Node.isSameNode",
+          "api.Node.lastChild",
+          "api.Node.lookupNamespaceURI",
+          "api.Node.lookupPrefix",
+          "api.Node.nextSibling",
+          "api.Node.nodeName",
+          "api.Node.nodeType",
+          "api.Node.nodeValue",
+          "api.Node.normalize",
+          "api.Node.ownerDocument",
+          "api.Node.parentElement",
+          "api.Node.parentNode",
+          "api.Node.previousSibling",
+          "api.Node.removeChild",
+          "api.Node.replaceChild",
+          "api.Node.textContent",
+          "api.NodeIterator",
+          "api.NodeIterator.filter",
+          "api.NodeIterator.nextNode",
+          "api.NodeIterator.pointerBeforeReferenceNode",
+          "api.NodeIterator.previousNode",
+          "api.NodeIterator.referenceNode",
+          "api.NodeIterator.root",
+          "api.NodeIterator.whatToShow",
+          "api.NodeList",
+          "api.NodeList.@@iterator",
+          "api.NodeList.entries",
+          "api.NodeList.forEach",
+          "api.NodeList.item",
+          "api.NodeList.keys",
+          "api.NodeList.length",
+          "api.NodeList.values",
+          "api.ProcessingInstruction",
+          "api.ProcessingInstruction.target",
+          "api.Text",
+          "api.Text.Text",
+          "api.Text.splitText",
+          "api.Text.wholeText",
+          "api.TreeWalker",
+          "api.TreeWalker.currentNode",
+          "api.TreeWalker.filter",
+          "api.TreeWalker.firstChild",
+          "api.TreeWalker.lastChild",
+          "api.TreeWalker.nextNode",
+          "api.TreeWalker.nextSibling",
+          "api.TreeWalker.parentNode",
+          "api.TreeWalker.previousNode",
+          "api.TreeWalker.previousSibling",
+          "api.TreeWalker.root",
+          "api.TreeWalker.whatToShow",
+          "api.Window.document",
+          "api.XMLDocument"
+        ],
+        "group": [
+          "dom"
+        ],
+        "spec": [
+          "https://dom.spec.whatwg.org/"
+        ]
+      },
+      "baseline": {
+        "inBaseline": true,
+        "achieved": "high",
+        "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
       }
     },
     "object-object": {
       "count": 5,
+      "featureId": "object-object",
       "samples": [
-        "src/hooks/useFilter.ts:366",
-        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1318",
-        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1531",
-        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1712",
-        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:1970"
+        "src/hooks/useFilter.ts",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx"
       ],
+      "info": {
+        "name": "Object",
+        "description": "Objects in JavaScript are collections of key-value pairs.",
+        "caniuse": null,
+        "compat_features": [
+          "javascript.builtins.Object",
+          "javascript.builtins.Object.Object",
+          "javascript.builtins.Object.assign",
+          "javascript.builtins.Object.constructor",
+          "javascript.builtins.Object.create",
+          "javascript.builtins.Object.defineProperties",
+          "javascript.builtins.Object.defineProperty",
+          "javascript.builtins.Object.entries",
+          "javascript.builtins.Object.freeze",
+          "javascript.builtins.Object.fromEntries",
+          "javascript.builtins.Object.getOwnPropertyDescriptor",
+          "javascript.builtins.Object.getOwnPropertyDescriptors",
+          "javascript.builtins.Object.getOwnPropertyNames",
+          "javascript.builtins.Object.getOwnPropertySymbols",
+          "javascript.builtins.Object.getPrototypeOf",
+          "javascript.builtins.Object.hasOwnProperty",
+          "javascript.builtins.Object.is",
+          "javascript.builtins.Object.isExtensible",
+          "javascript.builtins.Object.isFrozen",
+          "javascript.builtins.Object.isPrototypeOf",
+          "javascript.builtins.Object.isSealed",
+          "javascript.builtins.Object.keys",
+          "javascript.builtins.Object.preventExtensions",
+          "javascript.builtins.Object.preventExtensions.ES2015_behavior",
+          "javascript.builtins.Object.propertyIsEnumerable",
+          "javascript.builtins.Object.seal",
+          "javascript.builtins.Object.setPrototypeOf",
+          "javascript.builtins.Object.toString",
+          "javascript.builtins.Object.valueOf",
+          "javascript.builtins.Object.values",
+          "javascript.grammar.shorthand_object_literals",
+          "javascript.operators.object_initializer",
+          "javascript.operators.object_initializer.computed_property_names",
+          "javascript.operators.object_initializer.shorthand_method_names",
+          "javascript.operators.object_initializer.shorthand_property_names",
+          "javascript.operators.object_initializer.spread_properties",
+          "javascript.operators.optional_chaining"
+        ],
+        "group": null,
+        "spec": [
+          "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object-objects"
+        ]
+      },
       "baseline": {
         "inBaseline": true,
         "achieved": "high",
         "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1",
+        "firefox_android": "4",
+        "safari": "1",
+        "safari_ios": "1"
       }
     },
     "execcommand": {
       "count": 2,
+      "featureId": "execcommand",
       "samples": [
-        "src/common/component/UrlForm.tsx:1092",
-        "src/common/component/UrlList.tsx:1057"
+        "src/common/component/UrlForm.tsx",
+        "src/common/component/UrlList.tsx"
       ],
+      "info": {
+        "name": "execCommand()",
+        "description": "The execCommand() method reads and writes from the clipboard and performs editing commands on editable text, such as changing the font name or style. Related methods check whether commands are supported, enabled, or applied.",
+        "caniuse": null,
+        "compat_features": [
+          "api.Document.execCommand",
+          "api.Document.execCommand.copy",
+          "api.Document.execCommand.cut",
+          "api.Document.execCommand.defaultParagraphSeparator",
+          "api.Document.execCommand.insertBrOnReturn",
+          "api.Document.queryCommandEnabled",
+          "api.Document.queryCommandIndeterm",
+          "api.Document.queryCommandState",
+          "api.Document.queryCommandSupported",
+          "api.Document.queryCommandValue"
+        ],
+        "group": [
+          "clipboard"
+        ],
+        "spec": [
+          "https://w3c.github.io/editing/docs/execCommand/"
+        ]
+      },
       "baseline": {
         "inBaseline": false,
         "achieved": "none",
         "reason": "status:false"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "69",
+        "firefox_android": "79",
+        "safari": "1.3",
+        "safari_ios": "1"
       }
     },
     "canvas-2d": {
       "count": 2,
+      "featureId": "canvas-2d",
       "samples": [
-        "src/common/component/UrlForm.tsx:1513",
-        "src/views/statistic/StatsDashboard/StatsDashboard.tsx:2302"
+        "src/common/component/UrlForm.tsx",
+        "src/views/statistic/StatsDashboard/StatsDashboard.tsx"
       ],
+      "info": {
+        "name": "2D canvas",
+        "description": "The CanvasRenderingContext2D API is the \"2d\" rendering context for the <canvas> element. It represents a flat, two-dimensional space for drawing graphics and animations.",
+        "caniuse": null,
+        "compat_features": [
+          "api.CanvasGradient",
+          "api.CanvasGradient.addColorStop",
+          "api.CanvasPattern",
+          "api.CanvasPattern.setTransform",
+          "api.CanvasPattern.setTransform.dommatrix",
+          "api.CanvasRenderingContext2D",
+          "api.CanvasRenderingContext2D.arc",
+          "api.CanvasRenderingContext2D.arcTo",
+          "api.CanvasRenderingContext2D.beginPath",
+          "api.CanvasRenderingContext2D.bezierCurveTo",
+          "api.CanvasRenderingContext2D.canvas",
+          "api.CanvasRenderingContext2D.clearRect",
+          "api.CanvasRenderingContext2D.clip",
+          "api.CanvasRenderingContext2D.clip.path_parameter",
+          "api.CanvasRenderingContext2D.closePath",
+          "api.CanvasRenderingContext2D.createImageData",
+          "api.CanvasRenderingContext2D.createLinearGradient",
+          "api.CanvasRenderingContext2D.createPattern",
+          "api.CanvasRenderingContext2D.createRadialGradient",
+          "api.CanvasRenderingContext2D.direction",
+          "api.CanvasRenderingContext2D.drawFocusIfNeeded",
+          "api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter",
+          "api.CanvasRenderingContext2D.drawImage",
+          "api.CanvasRenderingContext2D.drawImage.ImageBitmap_source_image",
+          "api.CanvasRenderingContext2D.ellipse",
+          "api.CanvasRenderingContext2D.fill",
+          "api.CanvasRenderingContext2D.fill.path_parameter",
+          "api.CanvasRenderingContext2D.fillRect",
+          "api.CanvasRenderingContext2D.fillStyle",
+          "api.CanvasRenderingContext2D.fillText",
+          "api.CanvasRenderingContext2D.filter",
+          "api.CanvasRenderingContext2D.font",
+          "api.CanvasRenderingContext2D.fontKerning",
+          "api.CanvasRenderingContext2D.fontStretch",
+          "api.CanvasRenderingContext2D.fontVariantCaps",
+          "api.CanvasRenderingContext2D.getContextAttributes",
+          "api.CanvasRenderingContext2D.getImageData",
+          "api.CanvasRenderingContext2D.getLineDash",
+          "api.CanvasRenderingContext2D.getTransform",
+          "api.CanvasRenderingContext2D.globalAlpha",
+          "api.CanvasRenderingContext2D.globalCompositeOperation",
+          "api.CanvasRenderingContext2D.imageSmoothingEnabled",
+          "api.CanvasRenderingContext2D.imageSmoothingQuality",
+          "api.CanvasRenderingContext2D.isPointInPath",
+          "api.CanvasRenderingContext2D.isPointInPath.path_parameter",
+          "api.CanvasRenderingContext2D.isPointInStroke",
+          "api.CanvasRenderingContext2D.isPointInStroke.path_parameter",
+          "api.CanvasRenderingContext2D.lang",
+          "api.CanvasRenderingContext2D.letterSpacing",
+          "api.CanvasRenderingContext2D.lineCap",
+          "api.CanvasRenderingContext2D.lineDashOffset",
+          "api.CanvasRenderingContext2D.lineJoin",
+          "api.CanvasRenderingContext2D.lineTo",
+          "api.CanvasRenderingContext2D.lineWidth",
+          "api.CanvasRenderingContext2D.measureText",
+          "api.CanvasRenderingContext2D.miterLimit",
+          "api.CanvasRenderingContext2D.moveTo",
+          "api.CanvasRenderingContext2D.putImageData",
+          "api.CanvasRenderingContext2D.quadraticCurveTo",
+          "api.CanvasRenderingContext2D.rect",
+          "api.CanvasRenderingContext2D.resetTransform",
+          "api.CanvasRenderingContext2D.restore",
+          "api.CanvasRenderingContext2D.rotate",
+          "api.CanvasRenderingContext2D.save",
+          "api.CanvasRenderingContext2D.scale",
+          "api.CanvasRenderingContext2D.setLineDash",
+          "api.CanvasRenderingContext2D.setTransform",
+          "api.CanvasRenderingContext2D.setTransform.matrix_parameter",
+          "api.CanvasRenderingContext2D.shadowBlur",
+          "api.CanvasRenderingContext2D.shadowColor",
+          "api.CanvasRenderingContext2D.shadowOffsetX",
+          "api.CanvasRenderingContext2D.shadowOffsetY",
+          "api.CanvasRenderingContext2D.stroke",
+          "api.CanvasRenderingContext2D.stroke.path_parameter",
+          "api.CanvasRenderingContext2D.strokeRect",
+          "api.CanvasRenderingContext2D.strokeStyle",
+          "api.CanvasRenderingContext2D.strokeText",
+          "api.CanvasRenderingContext2D.textAlign",
+          "api.CanvasRenderingContext2D.textBaseline",
+          "api.CanvasRenderingContext2D.textRendering",
+          "api.CanvasRenderingContext2D.transform",
+          "api.CanvasRenderingContext2D.translate",
+          "api.CanvasRenderingContext2D.wordSpacing",
+          "api.HTMLCanvasElement.getContext.2d_context",
+          "api.ImageData",
+          "api.ImageData.ImageData",
+          "api.ImageData.colorSpace",
+          "api.ImageData.data",
+          "api.ImageData.height",
+          "api.ImageData.width",
+          "api.ImageData.worker_support",
+          "api.Path2D",
+          "api.Path2D.Path2D",
+          "api.Path2D.addPath",
+          "api.Path2D.arc",
+          "api.Path2D.arcTo",
+          "api.Path2D.bezierCurveTo",
+          "api.Path2D.closePath",
+          "api.Path2D.ellipse",
+          "api.Path2D.lineTo",
+          "api.Path2D.moveTo",
+          "api.Path2D.quadraticCurveTo",
+          "api.Path2D.rect",
+          "api.Path2D.roundRect",
+          "api.TextMetrics",
+          "api.TextMetrics.actualBoundingBoxAscent",
+          "api.TextMetrics.actualBoundingBoxDescent",
+          "api.TextMetrics.actualBoundingBoxLeft",
+          "api.TextMetrics.actualBoundingBoxRight",
+          "api.TextMetrics.alphabeticBaseline",
+          "api.TextMetrics.emHeightAscent",
+          "api.TextMetrics.emHeightDescent",
+          "api.TextMetrics.fontBoundingBoxAscent",
+          "api.TextMetrics.fontBoundingBoxDescent",
+          "api.TextMetrics.hangingBaseline",
+          "api.TextMetrics.ideographicBaseline",
+          "api.TextMetrics.width"
+        ],
+        "group": [
+          "canvas"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/canvas.html#2dcontext"
+        ]
+      },
       "baseline": {
         "inBaseline": true,
         "achieved": "high",
         "reason": "status:high"
+      },
+      "support": {
+        "chrome": "1",
+        "chrome_android": "18",
+        "edge": "12",
+        "firefox": "1.5",
+        "firefox_android": "4",
+        "safari": "2",
+        "safari_ios": "1"
       }
     }
   },
-  "generatedAt": "2025-09-26T12:28:29.398Z"
+  "generatedAt": "2025-09-27T01:25:35.196Z"
 }

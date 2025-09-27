@@ -91,6 +91,37 @@ function findFeature(query: string): string | null {
   return null;
 }
 
+
+function findFeatureByBCD(bcdKey: string): string | null {
+  if (!bcdKey) return null;
+  const q = bcdKey.toString();
+  // console.log(q, 'bdckey')
+  for (const key of Object.keys(features)) {
+    const entry = features[key];
+    if (Array.isArray(entry.compat_features)){
+      for (const c of entry.compat_features) {
+        // console.log(c, 'bdc')
+        if (normalize(c) === q || c.toLowerCase().endsWith(q)) return key;
+      }
+    }
+    // if (Array.isArray(entry.compat_features) && entry.compat_features.includes(q)) return key;
+  }
+  return null;
+}
+
+function getFeatureInfo(featureKey: string) {
+  const entry = features[featureKey];
+  if (!entry) return null;
+  return {
+    name: entry.name ?? null,
+    description: entry.description ?? entry.description_html ?? null,
+    caniuse: entry.caniuse ?? null,
+    compat_features: entry.compat_features ?? [],
+    group: entry.group ?? null,
+    spec: entry.spec ?? null,
+  };
+}
+
 function isFeatureInBaseline(
   featureKey: string,
   opts?: { year?: number | string; minBaseline?: "low" | "high" }
@@ -146,6 +177,9 @@ function getFeatureSupport(featureKey: string) {
 
 export default {
   findFeature,
+  findFeatureByBCD,
+  getFeatureInfo,
   isFeatureInBaseline,
   getFeatureSupport,
+  // _raw: features
 };
