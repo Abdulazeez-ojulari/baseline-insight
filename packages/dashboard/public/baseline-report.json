@@ -1,6 +1,6 @@
 {
   "scannedFiles": 61,
-  "baselineYear": "2025",
+  "baselineYear": "2017",
   "features": {
     "html": {
       "count": 2,
@@ -76,155 +76,6 @@
         "safari_ios": "1"
       }
     },
-    "meta": {
-      "count": 6,
-      "featureId": "meta",
-      "samples": [
-        "index.html",
-        "index.html",
-        "public/index.html",
-        "public/index.html",
-        "public/index.html"
-      ],
-      "info": {
-        "name": "<meta>",
-        "description": "The <meta> element represents metadata about the page used by the browser or search engines, including description, keywords, and character sets.",
-        "caniuse": null,
-        "compat_features": [
-          "api.HTMLMetaElement",
-          "api.HTMLMetaElement.content",
-          "api.HTMLMetaElement.httpEquiv",
-          "api.HTMLMetaElement.media",
-          "api.HTMLMetaElement.name",
-          "html.elements.meta",
-          "html.elements.meta.charset",
-          "html.elements.meta.content",
-          "html.elements.meta.http-equiv",
-          "html.elements.meta.http-equiv.content-type",
-          "html.elements.meta.http-equiv.refresh",
-          "html.elements.meta.name",
-          "html.elements.meta.name.referrer"
-        ],
-        "group": [
-          "html-elements"
-        ],
-        "spec": [
-          "https://html.spec.whatwg.org/multipage/semantics.html#meta"
-        ]
-      },
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      },
-      "support": {
-        "chrome": "1",
-        "chrome_android": "18",
-        "edge": "12",
-        "firefox": "1",
-        "firefox_android": "4",
-        "safari": "1",
-        "safari_ios": "1"
-      }
-    },
-    "link": {
-      "count": 4,
-      "featureId": "link",
-      "samples": [
-        "index.html",
-        "public/index.html",
-        "public/index.html",
-        "public/index.html"
-      ],
-      "info": {
-        "name": "<link>",
-        "description": "The <link> element creates a relationship between the current document and an external resource, such as a stylesheet or favicon.",
-        "caniuse": null,
-        "compat_features": [
-          "api.HTMLLinkElement",
-          "api.HTMLLinkElement.as",
-          "api.HTMLLinkElement.crossOrigin",
-          "api.HTMLLinkElement.disabled",
-          "api.HTMLLinkElement.href",
-          "api.HTMLLinkElement.hreflang",
-          "api.HTMLLinkElement.integrity",
-          "api.HTMLLinkElement.media",
-          "api.HTMLLinkElement.rel",
-          "api.HTMLLinkElement.relList",
-          "api.HTMLLinkElement.sizes",
-          "api.HTMLLinkElement.type",
-          "html.elements.link",
-          "html.elements.link.as",
-          "html.elements.link.crossorigin",
-          "html.elements.link.disabled",
-          "html.elements.link.href",
-          "html.elements.link.hreflang",
-          "html.elements.link.integrity",
-          "html.elements.link.media",
-          "html.elements.link.rel",
-          "html.elements.link.sizes",
-          "html.elements.link.type"
-        ],
-        "group": [
-          "html-elements"
-        ],
-        "spec": [
-          "https://html.spec.whatwg.org/multipage/semantics.html#the-link-element"
-        ]
-      },
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      },
-      "support": {
-        "chrome": "1",
-        "chrome_android": "18",
-        "edge": "12",
-        "firefox": "1",
-        "firefox_android": "4",
-        "safari": "≤4",
-        "safari_ios": "≤3.2"
-      }
-    },
-    "title": {
-      "count": 2,
-      "featureId": "title",
-      "samples": [
-        "index.html",
-        "public/index.html"
-      ],
-      "info": {
-        "name": "<title>",
-        "description": "The <title> element sets the title of the document and exposes it to users via the UI of the browser or app they're using and through assistive technology.",
-        "caniuse": null,
-        "compat_features": [
-          "api.HTMLTitleElement",
-          "api.HTMLTitleElement.text",
-          "html.elements.title"
-        ],
-        "group": [
-          "html-elements"
-        ],
-        "spec": [
-          "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element"
-        ]
-      },
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      },
-      "support": {
-        "chrome": "1",
-        "chrome_android": "18",
-        "edge": "12",
-        "firefox": "1",
-        "firefox_android": "4",
-        "safari": "1",
-        "safari_ios": "1"
-      }
-    },
     "body": {
       "count": 2,
       "featureId": "body",
@@ -260,95 +111,6 @@
         "firefox_android": "4",
         "safari": "3",
         "safari_ios": "1"
-      }
-    },
-    "div": {
-      "count": 2,
-      "featureId": "div",
-      "samples": [
-        "index.html",
-        "public/index.html"
-      ],
-      "info": {
-        "name": "<div>",
-        "description": "The <div> HTML element is the generic container for content.",
-        "caniuse": null,
-        "compat_features": [
-          "api.HTMLDivElement",
-          "html.elements.div"
-        ],
-        "group": [
-          "html-elements"
-        ],
-        "spec": [
-          "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element"
-        ]
-      },
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      },
-      "support": {
-        "chrome": "1",
-        "chrome_android": "18",
-        "edge": "12",
-        "firefox": "1",
-        "firefox_android": "4",
-        "safari": "1",
-        "safari_ios": "1"
-      }
-    },
-    "script": {
-      "count": 2,
-      "featureId": "script",
-      "samples": [
-        "index.html",
-        "public/index.html"
-      ],
-      "info": {
-        "name": "<script> and <noscript>",
-        "description": "The <script> element contains or loads data or executable code. This is typically used to load JavaScript code. The <noscript> element represents alternative content to show when scripting is not allowed.",
-        "caniuse": null,
-        "compat_features": [
-          "api.HTMLScriptElement",
-          "api.HTMLScriptElement.async",
-          "api.HTMLScriptElement.crossOrigin",
-          "api.HTMLScriptElement.defer",
-          "api.HTMLScriptElement.integrity",
-          "api.HTMLScriptElement.src",
-          "api.HTMLScriptElement.supports_static",
-          "api.HTMLScriptElement.text",
-          "api.HTMLScriptElement.type",
-          "html.elements.noscript",
-          "html.elements.script",
-          "html.elements.script.async",
-          "html.elements.script.crossorigin",
-          "html.elements.script.defer",
-          "html.elements.script.integrity",
-          "html.elements.script.src",
-          "html.elements.script.type"
-        ],
-        "group": [
-          "html-elements"
-        ],
-        "spec": [
-          "https://html.spec.whatwg.org/multipage/scripting.html#script"
-        ]
-      },
-      "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "reason": "status:high"
-      },
-      "support": {
-        "chrome": "1",
-        "chrome_android": "18",
-        "edge": "12",
-        "firefox": "1",
-        "firefox_android": "4",
-        "safari": "3",
-        "safari_ios": "2"
       }
     },
     "text-align": {
@@ -1872,5 +1634,5 @@
       }
     }
   },
-  "generatedAt": "2025-09-27T06:35:32.659Z"
+  "generatedAt": "2025-10-01T09:20:30.296Z"
 }

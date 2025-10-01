@@ -6,9 +6,14 @@ node_modules/*
 /packages/analyzer-cli/node_modules/*
 /packages/analyzer-cli/dist/*
 
-/packages/core-engine/node_modules
+/packages/core-engine/node_modules/*
 /packages/core-engine/dist
 /packages/core-engine/node_modules/*
 /packages/core-engine/dist/*
+
+/packages/vscode-extension/out
+/packages/vscode-extension/out/*
+/packages/vscode-extension/node_modules
+/packages/vscode-extension/node_modules/*
 
 test.json
