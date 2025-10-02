@@ -8,10 +8,46 @@
   },
   "contributes": {
     "languages": [
-      { "id": "javascript", "aliases": ["JavaScript", "js"], "extensions": [".js"] },
-      { "id": "typescript", "aliases": ["TypeScript", "ts"], "extensions": [".ts"] },
-      { "id": "html", "aliases": ["HTML", "htm"], "extensions": [".html", ".htm"] },
-      { "id": "css", "aliases": ["CSS"], "extensions": [".css"] }
+      {
+        "id": "javascript",
+        "aliases": [
+          "JavaScript",
+          "js"
+        ],
+        "extensions": [
+          ".js"
+        ]
+      },
+      {
+        "id": "typescript",
+        "aliases": [
+          "TypeScript",
+          "ts"
+        ],
+        "extensions": [
+          ".ts"
+        ]
+      },
+      {
+        "id": "html",
+        "aliases": [
+          "HTML",
+          "htm"
+        ],
+        "extensions": [
+          ".html",
+          ".htm"
+        ]
+      },
+      {
+        "id": "css",
+        "aliases": [
+          "CSS"
+        ],
+        "extensions": [
+          ".css"
+        ]
+      }
     ]
   },
   "activationEvents": [
@@ -27,10 +63,12 @@
   },
   "dependencies": {
     "@baseline-insight/core-engine": "*",
+    "parse5": "^8.0.0",
+    "postcss": "^8.5.6",
     "vscode-languageclient": "^8.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/vscode": "^1.76.0"
+    "@types/vscode": "^1.76.0",
+    "typescript": "^5.0.0"
   }
 }
