@@ -41,7 +41,7 @@ function parseYear(dateStr?: string | null): number | null {
 }
 
 function baselineRank(level: BaselineLevel | undefined | null): number {
-  console.log('ranking')
+  // console.log('ranking')
   if (level === "high") return 2;
   if (level === "low") return 1;
   return 0;
@@ -58,7 +58,7 @@ function findFeature(query: string): string | null {
   for (const key of Object.keys(features)) {
     const entry = features[key];
     if (key.toLowerCase() === q) return key;
-    if (normalize(entry.name).includes(q) && entry.name) return key;
+    // if (normalize(entry.name).includes(q) && entry.name) return key;
     
     if (Array.isArray(entry.caniuse)) {
       for (const c of entry.caniuse) {
@@ -71,13 +71,14 @@ function findFeature(query: string): string | null {
     if (Array.isArray(entry.compat_features)) {
       for (const c of entry.compat_features) {
         // console.log(c, 'bdc')
-        if (normalize(c) === q || c.toLowerCase().endsWith(q)) return key;
+        if(c.toLowerCase() === q || c.toLowerCase().endsWith(`.${q}`)) return key
+        
       }
     }
     
-    if ((entry.description && normalize(entry.description).includes(q)) || (entry.description_html && normalize(entry.description_html).includes(q))) {
-      return key;
-    }
+    // if ((entry.description && normalize(entry.description).includes(q)) || (entry.description_html && normalize(entry.description_html).includes(q))) {
+    //   return key;
+    // }
   }
 
   // const last = query.split(".").slice(-1)[0];
@@ -101,7 +102,8 @@ function findFeatureByBCD(bcdKey: string): string | null {
     if (Array.isArray(entry.compat_features)){
       for (const c of entry.compat_features) {
         // console.log(c, 'bdc')
-        if (normalize(c) === q || c.toLowerCase().endsWith(q)) return key;
+        if(c.toLowerCase() === q || c.toLowerCase().endsWith(`.${q}`)) return key
+
       }
     }
     // if (Array.isArray(entry.compat_features) && entry.compat_features.includes(q)) return key;

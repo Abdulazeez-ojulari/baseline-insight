@@ -62,6 +62,9 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
+    "@babel/parser": "^7.28.4",
+    "@babel/traverse": "^7.28.4",
+    "@babel/types": "^7.28.4",
     "@baseline-insight/core-engine": "*",
     "parse5": "^8.0.0",
     "postcss": "^8.5.6",

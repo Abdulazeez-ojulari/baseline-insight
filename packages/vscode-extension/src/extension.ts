@@ -2,10 +2,13 @@ import * as vscode from "vscode";
 import core from "@baseline-insight/core-engine";
 import { parse } from "parse5";
 import postcss from "postcss";
+import { parse as jsparse } from "@babel/parser";
+import traverse from "@babel/traverse";
+import * as t from "@babel/types";
 
 export function activate(context: vscode.ExtensionContext) {
 
-  const baselineYear = vscode.workspace.getConfiguration("baselineInsight").get("year", "2023");
+  const baselineYear = vscode.workspace.getConfiguration("baselineInsight").get("year", "2017");
 
   const hoverProvider = vscode.languages.registerHoverProvider(
     [
@@ -33,7 +36,7 @@ export function activate(context: vscode.ExtensionContext) {
 
           for(const token of tokens){
             const featureKey = core.findFeature(token) ?? core.findFeatureByBCD(token);
-            if (!featureKey) break;
+            if (!featureKey) continue;
 
             const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear });
             const info = core.getFeatureInfo(featureKey);
@@ -69,11 +72,62 @@ const tokenRegex = /\b([A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)+)\b/g;
 
 function extractJsFeatures(code: string): string[] {
   const features: string[] = [];
-  let match;
-  while ((match = tokenRegex.exec(code)) !== null) {
-    features.push(match[1]);
+
+  let ast;
+  try {
+    ast = jsparse(code, {
+    sourceType: "unambiguous",
+    plugins: [
+      "typescript",
+      "jsx",
+      "classProperties",
+      "objectRestSpread",
+      "optionalChaining",
+      "nullishCoalescingOperator",
+      "dynamicImport",
+    ],
+    errorRecovery: true
+  });
+  } catch (err) {
+    // console.warn("AST parse failed, falling back to regex", err);
+    return code.match(tokenRegex) || [];
   }
+
+  traverse(ast, {
+    Identifier(path) {
+      // features.push(path.node.name)
+        console.log('path.node.name', path.node.name)
+    },
+    MemberExpression(path) {
+      if (t.isIdentifier(path.node.property)) {
+        features.push(path.node.property.name)
+        console.log('path.node.property.name', path.node.property.name)
+      }
+      if (t.isIdentifier(path.node.object)) {
+        console.log('path.node.object.name', path.node.object.name)
+        features.push(path.node.object.name)
+      }
+    },
+    CallExpression(path) {
+      if (t.isIdentifier(path.node.callee)) {
+        features.push(path.node.callee.name)
+        console.log('path.node.callee.name', path.node.callee.name)
+      }
+      if (t.isMemberExpression(path.node.callee) && t.isIdentifier(path.node.callee.property)) {
+        features.push(path.node.callee.property.name)
+        console.log('path.node.callee.property.name', path.node.callee.property.name)
+      }
+    },
+  });
+
   return features;
+
+  // const features: string[] = [];
+  // let match;
+  // while ((match = tokenRegex.exec(code)) !== null) {
+  //   features.push(match[1]);
+  // }
+  // return features;
 }
 
 function extractHtmlFeatures(html: string, word: string): string[] {

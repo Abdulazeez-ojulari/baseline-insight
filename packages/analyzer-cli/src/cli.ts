@@ -6,6 +6,9 @@ import path from "path";
 import core from "@baseline-insight/core-engine";
 import { parse } from "parse5";
 import postcss from "postcss";
+import { parse as jsparse } from "@babel/parser";
+import traverse from "@babel/traverse";
+import * as t from "@babel/types";
 
 const program = new Command();
 
@@ -15,11 +18,57 @@ const tokenRegex = /\b([A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)+)\b/g;
 
 function extractJsFeatures(code: string): string[] {
   const features: string[] = [];
-  let match;
-  while ((match = tokenRegex.exec(code)) !== null) {
-    features.push(match[1]);
+
+  let ast;
+  try {
+    ast = jsparse(code, {
+    sourceType: "unambiguous",
+    plugins: [
+      "typescript",
+      "jsx",
+      "classProperties",
+      "objectRestSpread",
+      "optionalChaining",
+      "nullishCoalescingOperator",
+      "dynamicImport",
+    ],
+    errorRecovery: true
+  });
+  } catch (err) {
+    // console.warn("AST parse failed, falling back to regex", err);
+    return code.match(tokenRegex) || [];
   }
+
+  traverse(ast, {
+    Identifier(path) {
+      features.push(path.node.name)
+    },
+    MemberExpression(path) {
+      if (t.isIdentifier(path.node.property)) {
+        features.push(path.node.property.name)
+      }
+      if (t.isIdentifier(path.node.object)) {
+        features.push(path.node.object.name)
+      }
+    },
+    CallExpression(path) {
+      if (t.isIdentifier(path.node.callee)) {
+        features.push(path.node.callee.name)
+      }
+      if (t.isMemberExpression(path.node.callee) && t.isIdentifier(path.node.callee.property)) {
+        features.push(path.node.callee.property.name)
+      }
+    },
+  });
+
   return features;
+
+  // const features: string[] = [];
+  // let match;
+  // while ((match = tokenRegex.exec(code)) !== null) {
+  //   features.push(match[1]);
+  // }
+  // return features;
 }
 
 function extractHtmlFeatures(html: string): string[] {
@@ -111,15 +160,16 @@ program
     for (const rel of entries) {
       const file = path.join(projectDir, rel);
       const extname = path.extname(file) as FileType
-      console.log(extname)
+      // console.log(extname)
 
       try {
         const content = fs.readFileSync(file, "utf8");
         const tokens = extractFeatures(content, extname);
         for(const token of tokens){
-          console.log(token)
+          // console.log(token)
           const featureKey = (core.findFeature(token)) || core.findFeatureByBCD(token);
-          console.log(featureKey)
+          if(featureKey == 'proxy-reflect')
+          console.log(featureKey, token)
           if (featureKey) {
             // if (!found[featureKey]) found[featureKey] = { count: 0, samples: [], baseline: null };
             if (!found[featureKey]) {
