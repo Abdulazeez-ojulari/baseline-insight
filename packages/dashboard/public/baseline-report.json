@@ -6,7 +6,7 @@
       "count": 1,
       "featureId": "html",
       "samples": [
-        "index.html"
+        "index.html:2:1|html.elements.html"
       ],
       "info": {
         "name": "<html>",
@@ -43,7 +43,7 @@
       "count": 1,
       "featureId": "head",
       "samples": [
-        "index.html"
+        "index.html:4:1|html.elements.head"
       ],
       "info": {
         "name": "<head>",
@@ -77,13 +77,14 @@
       }
     },
     "meta": {
-      "count": 4,
+      "count": 11,
       "featureId": "meta",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:5:3|html.elements.meta",
+        "index.html:5:9|html.elements.meta.charset",
+        "index.html:6:3|html.elements.meta",
+        "index.html:6:9|html.elements.meta.http-equiv",
+        "index.html:6:38|html.elements.meta.content"
       ],
       "info": {
         "name": "<meta>",
@@ -131,7 +132,7 @@
       "count": 1,
       "featureId": "title",
       "samples": [
-        "index.html"
+        "index.html:8:3|html.elements.title"
       ],
       "info": {
         "name": "<title>",
@@ -166,14 +167,14 @@
       }
     },
     "link": {
-      "count": 7,
+      "count": 25,
       "featureId": "link",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:14:3|html.elements.link",
+        "index.html:14:9|html.elements.link.rel",
+        "index.html:14:29|html.elements.link.href",
+        "index.html:14:50|html.elements.link.type",
+        "index.html:19:3|html.elements.link"
       ],
       "info": {
         "name": "<link>",
@@ -228,14 +229,14 @@
       }
     },
     "script": {
-      "count": 8,
+      "count": 19,
       "featureId": "script",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:26:3|html.elements.script",
+        "index.html:26:11|html.elements.script.src",
+        "index.html:1000:3|html.elements.script",
+        "index.html:1000:11|html.elements.script.src",
+        "index.html:1001:3|html.elements.script"
       ],
       "info": {
         "name": "<script> and <noscript>",
@@ -287,7 +288,7 @@
       "count": 1,
       "featureId": "body",
       "samples": [
-        "index.html"
+        "index.html:32:1|html.elements.body"
       ],
       "info": {
         "name": "<body>",
@@ -324,11 +325,11 @@
       "count": 7,
       "featureId": "header-footer",
       "samples": [
-        "index.html",
-        "index.html",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "index.html:38:3|html.elements.header",
+        "index.html:880:3|html.elements.footer",
+        "assets/js/script.js:115:6|header",
+        "assets/js/script.js:118:26|header",
+        "assets/js/script.js:118:26|header"
       ],
       "info": {
         "name": "<header> and <footer>",
@@ -366,11 +367,11 @@
       "count": 73,
       "featureId": "div",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:40:5|html.elements.div",
+        "index.html:42:5|html.elements.div",
+        "index.html:43:7|html.elements.div",
+        "index.html:65:9|html.elements.div",
+        "index.html:100:5|html.elements.div"
       ],
       "info": {
         "name": "<div>",
@@ -407,11 +408,11 @@
       "count": 61,
       "featureId": "list-elements",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:45:9|html.elements.ul",
+        "index.html:47:11|html.elements.li",
+        "index.html:55:11|html.elements.li",
+        "index.html:66:11|html.elements.ul",
+        "index.html:68:13|html.elements.li"
       ],
       "info": {
         "name": "<ol>, <ul>, and <li>",
@@ -460,14 +461,14 @@
       }
     },
     "a": {
-      "count": 81,
+      "count": 126,
       "featureId": "a",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:48:13|html.elements.a",
+        "index.html:48:16|html.elements.a.href",
+        "index.html:56:13|html.elements.a",
+        "index.html:56:16|html.elements.a.href",
+        "index.html:69:15|html.elements.a"
       ],
       "info": {
         "name": "<a>",
@@ -532,11 +533,11 @@
       "count": 22,
       "featureId": "span",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:51:15|html.elements.span",
+        "index.html:150:13|html.elements.span",
+        "index.html:223:13|html.elements.span",
+        "index.html:227:13|html.elements.span",
+        "index.html:461:23|html.elements.span"
       ],
       "info": {
         "name": "<span>",
@@ -573,11 +574,11 @@
       "count": 5,
       "featureId": "address",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:59:15|html.elements.address",
+        "index.html:455:23|html.elements.address",
+        "index.html:539:23|html.elements.address",
+        "index.html:625:23|html.elements.address",
+        "index.html:902:17|html.elements.address"
       ],
       "info": {
         "name": "<address>",
@@ -610,14 +611,14 @@
       }
     },
     "img": {
-      "count": 11,
+      "count": 34,
       "featureId": "img",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:104:11|html.elements.img",
+        "index.html:104:16|html.elements.img.src",
+        "index.html:104:47|html.elements.img.alt",
+        "index.html:112:15|html.elements.img",
+        "index.html:112:20|html.elements.img.src"
       ],
       "info": {
         "name": "<img>",
@@ -673,8 +674,8 @@
       "count": 2,
       "featureId": "nav",
       "samples": [
-        "index.html",
-        "index.html"
+        "index.html:107:9|html.elements.nav",
+        "index.html:222:11|html.elements.nav"
       ],
       "info": {
         "name": "<nav>",
@@ -710,11 +711,11 @@
       "count": 11,
       "featureId": "button",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:115:13|html.elements.button",
+        "index.html:147:11|html.elements.button",
+        "index.html:452:21|html.elements.button",
+        "index.html:458:21|html.elements.button",
+        "index.html:464:21|html.elements.button"
       ],
       "info": {
         "name": "<button>",
@@ -773,7 +774,7 @@
       "count": 1,
       "featureId": "main",
       "samples": [
-        "index.html"
+        "index.html:164:3|html.elements.main"
       ],
       "info": {
         "name": "<main>",
@@ -809,7 +810,7 @@
       "count": 1,
       "featureId": "article",
       "samples": [
-        "index.html"
+        "index.html:165:5|html.elements.article"
       ],
       "info": {
         "name": "<article>",
@@ -845,11 +846,11 @@
       "count": 21,
       "featureId": "headings",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:176:17|html.elements.h2",
+        "index.html:209:17|html.elements.h2",
+        "index.html:286:13|html.elements.h2",
+        "index.html:357:11|html.elements.h2",
+        "index.html:368:17|html.elements.h3"
       ],
       "info": {
         "name": "<h1> through <h6>",
@@ -891,11 +892,11 @@
       "count": 5,
       "featureId": "section",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:273:7|html.elements.section",
+        "index.html:352:7|html.elements.section",
+        "index.html:430:7|html.elements.section",
+        "index.html:702:7|html.elements.section",
+        "index.html:849:7|html.elements.section"
       ],
       "info": {
         "name": "<section>",
@@ -931,10 +932,10 @@
       "count": 4,
       "featureId": "figure",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:276:11|html.elements.figure",
+        "index.html:442:17|html.elements.figure",
+        "index.html:526:17|html.elements.figure",
+        "index.html:612:17|html.elements.figure"
       ],
       "info": {
         "name": "<figure> and <figcaption>",
@@ -972,11 +973,11 @@
       "count": 21,
       "featureId": "p",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:284:13|html.elements.p",
+        "index.html:288:13|html.elements.p",
+        "index.html:307:17|html.elements.p",
+        "index.html:315:17|html.elements.p",
+        "index.html:323:17|html.elements.p"
       ],
       "info": {
         "name": "<p>",
@@ -1013,11 +1014,11 @@
       "count": 10,
       "featureId": "strong",
       "samples": [
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html",
-        "index.html"
+        "index.html:477:21|html.elements.strong",
+        "index.html:493:23|html.elements.strong",
+        "index.html:501:23|html.elements.strong",
+        "index.html:509:23|html.elements.strong",
+        "index.html:561:21|html.elements.strong"
       ],
       "info": {
         "name": "<strong>",
@@ -1049,15 +1050,68 @@
         "safari_ios": "≤3.2"
       }
     },
+    "js-modules": {
+      "count": 1,
+      "featureId": "js-modules",
+      "samples": [
+        "index.html:1010:11|html.elements.script.nomodule"
+      ],
+      "info": {
+        "name": "JavaScript modules",
+        "description": "JavaScript modules allow code to be organized into reusable units. Modules use import to load other modules and export to declare what is available to import from other modules. In HTML, modules are loaded with <script type=\"module\">.",
+        "caniuse": [
+          "es6-module"
+        ],
+        "compat_features": [
+          "api.Worklet.ecmascript_modules",
+          "html.elements.script.nomodule",
+          "html.elements.script.type.module",
+          "javascript.operators.import",
+          "javascript.operators.import_meta",
+          "javascript.operators.import_meta.resolve",
+          "javascript.statements.export",
+          "javascript.statements.export.arbitrary_module_namespace_identifier_names",
+          "javascript.statements.export.default",
+          "javascript.statements.export.namespace",
+          "javascript.statements.import",
+          "javascript.statements.import.arbitrary_module_namespace_identifier_names",
+          "javascript.statements.import.import_attributes",
+          "javascript.statements.import.worklet_support",
+          "svg.elements.script.type.module"
+        ],
+        "group": [
+          "js-modules"
+        ],
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/webappapis.html#javascript-module-script",
+          "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-modules"
+        ]
+      },
+      "baseline": {
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
+      },
+      "support": {
+        "chrome": "61",
+        "chrome_android": "61",
+        "edge": "16",
+        "firefox": "60",
+        "firefox_android": "60",
+        "safari": "11",
+        "safari_ios": "11"
+      }
+    },
     "margin": {
       "count": 307,
       "featureId": "margin",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:93:5|css.properties.margin",
+        "assets/css/style.css:220:5|css.properties.margin-bottom",
+        "assets/css/style.css:225:5|css.properties.margin-bottom",
+        "assets/css/style.css:382:5|css.properties.margin-bottom",
+        "assets/css/style.css:437:5|css.properties.margin-bottom"
       ],
       "info": {
         "name": "margin",
@@ -1102,11 +1156,11 @@
       "count": 161,
       "featureId": "padding",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:94:5|css.properties.padding",
+        "assets/css/style.css:185:5|css.properties.padding",
+        "assets/css/style.css:215:5|css.properties.padding",
+        "assets/css/style.css:236:5|css.properties.padding",
+        "assets/css/style.css:251:5|css.properties.padding-bottom"
       ],
       "info": {
         "name": "padding",
@@ -1146,11 +1200,11 @@
       "count": 8,
       "featureId": "box-sizing",
       "samples": [
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:95:5|css.properties.box-sizing",
+        "assets/bootstrap/css/bootstrap.css:84:8|css.properties.box-sizing",
+        "assets/bootstrap/css/bootstrap.css:186:3|css.properties.box-sizing",
+        "assets/bootstrap/css/bootstrap.css:192:11|css.properties.box-sizing",
+        "assets/bootstrap/css/bootstrap.css:297:11|css.properties.box-sizing"
       ],
       "info": {
         "name": "box-sizing",
@@ -1190,11 +1244,11 @@
       "count": 10,
       "featureId": "list-style",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:98:8|css.properties.list-style",
+        "assets/css/style.css:1159:12|css.properties.list-style",
+        "assets/bootstrap/css/bootstrap.css:600:3|css.properties.list-style",
+        "assets/bootstrap/css/bootstrap.css:605:3|css.properties.list-style",
+        "assets/bootstrap/css/bootstrap.css:3534:3|css.properties.list-style"
       ],
       "info": {
         "name": "List style",
@@ -1295,11 +1349,11 @@
       "count": 22,
       "featureId": "text-decoration",
       "samples": [
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:100:7|css.properties.text-decoration",
+        "assets/bootstrap/css/bootstrap.css:226:5|css.properties.text-decoration",
+        "assets/bootstrap/css/bootstrap.css:324:3|css.properties.text-decoration",
+        "assets/bootstrap/css/bootstrap.css:330:3|css.properties.text-decoration",
+        "assets/bootstrap/css/bootstrap.css:2282:3|css.properties.text-decoration"
       ],
       "info": {
         "name": "text-decoration",
@@ -1358,11 +1412,11 @@
       "count": 259,
       "featureId": "display",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:106:14|css.properties.display",
+        "assets/css/style.css:244:5|css.properties.display",
+        "assets/css/style.css:294:5|css.properties.display",
+        "assets/css/style.css:308:5|css.properties.display",
+        "assets/css/style.css:324:5|css.properties.display"
       ],
       "info": {
         "name": "Display",
@@ -1405,11 +1459,11 @@
       "count": 246,
       "featureId": "borders",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:109:5|css.properties.border",
+        "assets/css/style.css:139:5|css.properties.border-left",
+        "assets/css/style.css:184:5|css.properties.border",
+        "assets/css/style.css:192:5|css.properties.border-color",
+        "assets/css/style.css:268:5|css.properties.border"
       ],
       "info": {
         "name": "Borders",
@@ -1475,11 +1529,11 @@
       "count": 57,
       "featureId": "background",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:110:5|css.properties.background",
+        "assets/css/style.css:126:5|css.properties.background",
+        "assets/css/style.css:135:31|css.properties.background",
+        "assets/css/style.css:138:5|css.properties.background",
+        "assets/css/style.css:179:5|css.properties.background"
       ],
       "info": {
         "name": "background",
@@ -1518,8 +1572,8 @@
       "count": 2,
       "featureId": "font-shorthand",
       "samples": [
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:111:5|css.properties.font",
+        "assets/bootstrap/css/bootstrap.css:6575:3|css.properties.font"
       ],
       "info": {
         "name": "Font shorthand",
@@ -1561,11 +1615,11 @@
       "count": 28,
       "featureId": "text-align",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:112:5|css.properties.text-align",
+        "assets/css/style.css:224:5|css.properties.text-align",
+        "assets/css/style.css:606:5|css.properties.text-align",
+        "assets/css/style.css:898:5|css.properties.text-align",
+        "assets/css/style.css:1147:5|css.properties.text-align"
       ],
       "info": {
         "name": "text-align",
@@ -1608,11 +1662,11 @@
       "count": 24,
       "featureId": "cursor",
       "samples": [
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:113:5|css.properties.cursor",
+        "assets/bootstrap/css/bootstrap.css:174:3|css.properties.cursor",
+        "assets/bootstrap/css/bootstrap.css:180:3|css.properties.cursor",
+        "assets/bootstrap/css/bootstrap.css:669:3|css.properties.cursor",
+        "assets/bootstrap/css/bootstrap.css:1976:3|css.properties.cursor"
       ],
       "info": {
         "name": "Cursor styles",
@@ -1690,11 +1744,11 @@
       "count": 7,
       "featureId": "font-style",
       "samples": [
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:116:13|css.properties.font-style",
+        "assets/bootstrap/css/bootstrap.css:78:3|css.properties.font-style",
+        "assets/bootstrap/css/bootstrap.css:520:3|css.properties.font-style",
+        "assets/bootstrap/css/bootstrap.css:736:3|css.properties.font-style",
+        "assets/bootstrap/css/bootstrap.css:1905:3|css.properties.font-style"
       ],
       "info": {
         "name": "font-style",
@@ -1735,11 +1789,11 @@
       "count": 224,
       "featureId": "color",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:116:33|css.properties.color",
+        "assets/css/style.css:157:5|css.properties.color",
+        "assets/css/style.css:172:5|css.properties.color",
+        "assets/css/style.css:175:13|css.properties.color",
+        "assets/css/style.css:180:5|css.properties.color"
       ],
       "info": {
         "name": "Color",
@@ -1776,11 +1830,11 @@
       "count": 5,
       "featureId": "pointer-events",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:118:14|css.properties.pointer-events",
+        "assets/css/style.css:408:5|css.properties.pointer-events",
+        "assets/css/style.css:415:5|css.properties.pointer-events",
+        "assets/css/style.css:692:5|css.properties.pointer-events",
+        "assets/bootstrap/css/bootstrap.css:2296:3|css.properties.pointer-events"
       ],
       "info": {
         "name": "pointer-events",
@@ -1819,11 +1873,11 @@
       "count": 19,
       "featureId": "font-family",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:121:5|css.properties.font-family",
+        "assets/css/style.css:158:5|css.properties.font-family",
+        "assets/css/style.css:181:5|css.properties.font-family",
+        "assets/css/style.css:446:5|css.properties.font-family",
+        "assets/css/style.css:730:5|css.properties.font-family"
       ],
       "info": {
         "name": "font-family",
@@ -1860,7 +1914,7 @@
       "count": 1,
       "featureId": "scroll-behavior",
       "samples": [
-        "assets/css/style.css"
+        "assets/css/style.css:122:5|css.properties.scroll-behavior"
       ],
       "info": {
         "name": "scroll-behavior",
@@ -1881,10 +1935,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "61",
@@ -1900,11 +1954,11 @@
       "count": 29,
       "featureId": "overflow-shorthand",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:127:5|css.properties.overflow-x",
+        "assets/css/style.css:247:5|css.properties.overflow-x",
+        "assets/css/style.css:674:5|css.properties.overflow",
+        "assets/css/style.css:802:5|css.properties.overflow",
+        "assets/css/style.css:944:5|css.properties.overflow"
       ],
       "info": {
         "name": "overflow",
@@ -1939,10 +1993,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2022,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "68",
@@ -1958,11 +2012,11 @@
       "count": 199,
       "featureId": "width-height",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:131:5|css.properties.width",
+        "assets/css/style.css:132:5|css.properties.height",
+        "assets/css/style.css:200:5|css.properties.width",
+        "assets/css/style.css:201:5|css.properties.height",
+        "assets/css/style.css:207:37|css.properties.width"
       ],
       "info": {
         "name": "Width and height",
@@ -2006,11 +2060,11 @@
       "count": 32,
       "featureId": "logical-properties",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:150:16|css.properties.padding-inline",
+        "assets/css/style.css:219:5|css.properties.margin-inline",
+        "assets/css/style.css:248:5|css.properties.margin-inline",
+        "assets/css/style.css:249:5|css.properties.padding-inline",
+        "assets/css/style.css:289:5|css.properties.padding-block"
       ],
       "info": {
         "name": "Logical properties",
@@ -2114,10 +2168,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "89",
@@ -2133,11 +2187,11 @@
       "count": 22,
       "featureId": "transitions",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:152:15|css.properties.transition",
+        "assets/css/style.css:203:5|css.properties.transition",
+        "assets/css/style.css:367:5|css.properties.transition",
+        "assets/css/style.css:373:5|css.properties.transition",
+        "assets/css/style.css:409:5|css.properties.transition"
       ],
       "info": {
         "name": "Transitions (CSS)",
@@ -2195,11 +2249,11 @@
       "count": 66,
       "featureId": "line-height",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:159:5|css.properties.line-height",
+        "assets/css/style.css:164:5|css.properties.line-height",
+        "assets/css/style.css:487:5|css.properties.line-height",
+        "assets/css/style.css:532:5|css.properties.line-height",
+        "assets/css/style.css:570:5|css.properties.line-height"
       ],
       "info": {
         "name": "line-height",
@@ -2236,11 +2290,11 @@
       "count": 113,
       "featureId": "font-size",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:163:5|css.properties.font-size",
+        "assets/css/style.css:167:9|css.properties.font-size",
+        "assets/css/style.css:170:5|css.properties.font-size",
+        "assets/css/style.css:182:5|css.properties.font-size",
+        "assets/css/style.css:213:5|css.properties.font-size"
       ],
       "info": {
         "name": "font-size",
@@ -2279,11 +2333,11 @@
       "count": 37,
       "featureId": "font-weight",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:171:5|css.properties.font-weight",
+        "assets/css/style.css:214:5|css.properties.font-weight",
+        "assets/css/style.css:307:5|css.properties.font-weight",
+        "assets/css/style.css:341:5|css.properties.font-weight",
+        "assets/css/style.css:396:5|css.properties.font-weight"
       ],
       "info": {
         "name": "font-weight",
@@ -2326,11 +2380,11 @@
       "count": 73,
       "featureId": "position",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:178:5|css.properties.position",
+        "assets/css/style.css:197:5|css.properties.position",
+        "assets/css/style.css:233:5|css.properties.position",
+        "assets/css/style.css:283:5|css.properties.position",
+        "assets/css/style.css:357:5|css.properties.position"
       ],
       "info": {
         "name": "Position",
@@ -2366,11 +2420,11 @@
       "count": 8,
       "featureId": "text-transform",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:183:5|css.properties.text-transform",
+        "assets/css/style.css:232:5|css.properties.text-transform",
+        "assets/css/style.css:397:5|css.properties.text-transform",
+        "assets/css/style.css:1000:5|css.properties.text-transform",
+        "assets/css/style.css:1612:7|css.properties.text-transform"
       ],
       "info": {
         "name": "text-transform",
@@ -2417,11 +2471,11 @@
       "count": 28,
       "featureId": "z-index",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:186:5|css.properties.z-index",
+        "assets/css/style.css:204:5|css.properties.z-index",
+        "assets/css/style.css:284:5|css.properties.z-index",
+        "assets/css/style.css:364:5|css.properties.z-index",
+        "assets/css/style.css:410:5|css.properties.z-index"
       ],
       "info": {
         "name": "z-index",
@@ -2460,11 +2514,11 @@
       "count": 247,
       "featureId": "content",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:196:5|css.properties.content",
+        "assets/css/style.css:641:5|css.properties.content",
+        "assets/css/style.css:688:5|css.properties.content",
+        "assets/bootstrap/css/bootstrap.css:229:5|css.properties.content",
+        "assets/bootstrap/css/bootstrap.css:232:5|css.properties.content"
       ],
       "info": {
         "name": "Content",
@@ -2508,11 +2562,11 @@
       "count": 236,
       "featureId": "physical-properties",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:198:5|css.properties.top",
+        "assets/css/style.css:199:5|css.properties.left",
+        "assets/css/style.css:234:5|css.properties.top",
+        "assets/css/style.css:235:5|css.properties.right",
+        "assets/css/style.css:358:5|css.properties.top"
       ],
       "info": {
         "name": "Physical properties",
@@ -2555,11 +2609,11 @@
       "count": 120,
       "featureId": "border-radius",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:218:5|css.properties.border-radius",
+        "assets/css/style.css:263:5|css.properties.border-radius",
+        "assets/css/style.css:269:5|css.properties.border-radius",
+        "assets/css/style.css:518:5|css.properties.border-radius",
+        "assets/css/style.css:550:5|css.properties.border-radius"
       ],
       "info": {
         "name": "border-radius",
@@ -2612,11 +2666,11 @@
       "count": 59,
       "featureId": "flexbox",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:245:5|css.properties.align-items",
+        "assets/css/style.css:295:5|css.properties.flex-wrap",
+        "assets/css/style.css:296:5|css.properties.justify-content",
+        "assets/css/style.css:297:5|css.properties.align-items",
+        "assets/css/style.css:309:5|css.properties.justify-content"
       ],
       "info": {
         "name": "Flexbox",
@@ -2727,11 +2781,11 @@
       "count": 36,
       "featureId": "grid",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:246:5|css.properties.gap",
+        "assets/css/style.css:300:28|css.properties.gap",
+        "assets/css/style.css:302:22|css.properties.gap",
+        "assets/css/style.css:311:5|css.properties.gap",
+        "assets/css/style.css:328:26|css.properties.gap"
       ],
       "info": {
         "name": "Grid",
@@ -2830,10 +2884,10 @@
       "count": 4,
       "featureId": "scroll-snap",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:250:5|css.properties.scroll-padding-left",
+        "assets/css/style.css:252:5|css.properties.scroll-snap-type",
+        "assets/css/style.css:257:5|css.properties.scroll-snap-align",
+        "assets/css/style.css:1205:7|css.properties.scroll-padding-left"
       ],
       "info": {
         "name": "Scroll snap",
@@ -2895,10 +2949,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2022,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "69",
@@ -2914,11 +2968,11 @@
       "count": 42,
       "featureId": "min-max-width-height",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:256:5|css.properties.min-width",
+        "assets/css/style.css:360:5|css.properties.max-width",
+        "assets/css/style.css:509:5|css.properties.max-width",
+        "assets/css/style.css:549:5|css.properties.min-width",
+        "assets/css/style.css:577:5|css.properties.max-width"
       ],
       "info": {
         "name": "Min and max width and height",
@@ -2962,11 +3016,11 @@
       "count": 19,
       "featureId": "outline",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:262:5|css.properties.outline",
+        "assets/css/style.css:1162:14|css.properties.outline",
+        "assets/bootstrap/css/bootstrap.css:55:3|css.properties.outline",
+        "assets/bootstrap/css/bootstrap.css:60:3|css.properties.outline",
+        "assets/bootstrap/css/bootstrap.css:334:3|css.properties.outline"
       ],
       "info": {
         "name": "outline",
@@ -2981,10 +3035,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "94",
@@ -3000,11 +3054,11 @@
       "count": 41,
       "featureId": "box-shadow",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:363:5|css.properties.box-shadow",
+        "assets/css/style.css:428:5|css.properties.box-shadow",
+        "assets/css/style.css:608:5|css.properties.box-shadow",
+        "assets/css/style.css:668:5|css.properties.box-shadow",
+        "assets/css/style.css:875:5|css.properties.box-shadow"
       ],
       "info": {
         "name": "box-shadow",
@@ -3045,11 +3099,11 @@
       "count": 5,
       "featureId": "visibility",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:366:5|css.properties.visibility",
+        "assets/css/style.css:371:5|css.properties.visibility",
+        "assets/bootstrap/css/bootstrap.css:6086:3|css.properties.visibility",
+        "assets/bootstrap/css/bootstrap.css:6571:3|css.properties.visibility",
+        "assets/bootstrap/css/bootstrap.css:6584:3|css.properties.visibility"
       ],
       "info": {
         "name": "visibility",
@@ -3088,11 +3142,11 @@
       "count": 17,
       "featureId": "transforms2d",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:372:5|css.properties.transform",
+        "assets/css/style.css:685:43|css.properties.transform",
+        "assets/css/style.css:910:5|css.properties.transform",
+        "assets/css/style.css:954:52|css.properties.transform",
+        "assets/css/style.css:1634:12|css.properties.transform"
       ],
       "info": {
         "name": "2D transforms",
@@ -3158,11 +3212,11 @@
       "count": 49,
       "featureId": "opacity",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:407:5|css.properties.opacity",
+        "assets/css/style.css:414:5|css.properties.opacity",
+        "assets/bootstrap/css/bootstrap.css:1962:3|css.properties.opacity",
+        "assets/bootstrap/css/bootstrap.css:2298:3|css.properties.opacity",
+        "assets/bootstrap/css/bootstrap.css:2657:3|css.properties.opacity"
       ],
       "info": {
         "name": "opacity",
@@ -3204,8 +3258,8 @@
       "count": 2,
       "featureId": "aspect-ratio",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:673:5|css.properties.aspect-ratio",
+        "assets/css/style.css:945:5|css.properties.aspect-ratio"
       ],
       "info": {
         "name": "aspect-ratio",
@@ -3225,10 +3279,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "88",
@@ -3244,8 +3298,8 @@
       "count": 2,
       "featureId": "object-fit",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:681:5|css.properties.object-fit",
+        "assets/css/style.css:950:5|css.properties.object-fit"
       ],
       "info": {
         "name": "object-fit",
@@ -3267,10 +3321,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2022,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "32",
@@ -3286,8 +3340,8 @@
       "count": 2,
       "featureId": "all",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css"
+        "assets/css/style.css:1307:7|css.properties.all",
+        "assets/css/style.css:1601:22|css.properties.all"
       ],
       "info": {
         "name": "all",
@@ -3306,10 +3360,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2022,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "37",
@@ -3325,7 +3379,7 @@
       "count": 1,
       "featureId": "multi-column",
       "samples": [
-        "assets/css/style.css"
+        "assets/css/style.css:1503:22|css.properties.column-gap"
       ],
       "info": {
         "name": "Multi-column layout",
@@ -3376,11 +3430,11 @@
       "count": 31,
       "featureId": "animations-css",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/css/style.css:1630:7|css.properties.animation",
+        "assets/css/style.css:1633:5|css.at-rules.keyframes",
+        "assets/js/script.js:40:17|jump",
+        "assets/js/script.js:40:17|jump",
+        "assets/js/script.js:40:28|jump"
       ],
       "info": {
         "name": "Animations (CSS)",
@@ -3462,11 +3516,11 @@
       "count": 76,
       "featureId": "media-queries",
       "samples": [
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/css/style.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/css/style.css:1174:3|css.at-rules.media",
+        "assets/css/style.css:1259:3|css.at-rules.media",
+        "assets/css/style.css:1409:3|css.at-rules.media",
+        "assets/css/style.css:1561:3|css.at-rules.media",
+        "assets/bootstrap/css/bootstrap.css:217:1|css.at-rules.media"
       ],
       "info": {
         "name": "Media queries",
@@ -3519,9 +3573,9 @@
       "count": 3,
       "featureId": "page-breaks",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/js/script.js:7:11|Page",
+        "assets/js/script.js:53:7|Page",
+        "assets/js/script.js:53:7|Page"
       ],
       "info": {
         "name": "Page breaks",
@@ -3570,10 +3624,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2021,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "50",
@@ -3589,11 +3643,11 @@
       "count": 18,
       "featureId": "i",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/js/script.js:27:34|i",
+        "assets/js/script.js:40:34|i",
+        "assets/js/script.js:96:9|i",
+        "assets/js/script.js:96:16|i",
+        "assets/js/script.js:96:40|i"
       ],
       "info": {
         "name": "<i>",
@@ -3629,11 +3683,11 @@
       "count": 19,
       "featureId": "events",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/js/script.js:29:48|event",
+        "assets/js/script.js:103:2|addEventListener",
+        "assets/js/script.js:103:2|addEventListener",
+        "assets/js/script.js:103:16|addEventListener",
+        "assets/js/script.js:117:0|addEventListener"
       ],
       "info": {
         "name": "Events",
@@ -3703,10 +3757,10 @@
       "count": 4,
       "featureId": "user-activation",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/js/script.js:33:22|isActive",
+        "assets/js/script.js:33:22|isActive",
+        "assets/js/script.js:33:33|isActive",
+        "assets/slitslider/js/jquery.slitslider.js:599:2|isActive"
       ],
       "info": {
         "name": "User activation",
@@ -3726,10 +3780,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "72",
@@ -3745,11 +3799,11 @@
       "count": 64,
       "featureId": "dom",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/js/script.js:76:41|toggle",
+        "assets/js/script.js:76:41|toggle",
+        "assets/js/script.js:76:41|classList",
+        "assets/js/script.js:76:46|classList",
+        "assets/js/script.js:76:56|toggle"
       ],
       "info": {
         "name": "DOM",
@@ -4069,9 +4123,9 @@
       "count": 3,
       "featureId": "overlay",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/js/script.js:85:6|overlay",
+        "assets/js/script.js:90:20|overlay",
+        "assets/js/script.js:105:19|overlay"
       ],
       "info": {
         "name": "overlay",
@@ -4105,9 +4159,9 @@
       "count": 3,
       "featureId": "push",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/js/script.js:96:47|push",
+        "assets/js/script.js:96:47|push",
+        "assets/js/script.js:96:58|push"
       ],
       "info": {
         "name": "Push messages",
@@ -4156,10 +4210,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "50",
@@ -4175,11 +4229,11 @@
       "count": 30,
       "featureId": "window",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/js/script.js:117:0|window",
+        "assets/js/script.js:117:0|window",
+        "assets/js/script.js:118:2|window",
+        "assets/js/script.js:118:2|window",
+        "assets/bootstrap/js/bootstrap.js:110:50|parent"
       ],
       "info": {
         "name": "Window",
@@ -4248,8 +4302,8 @@
       "count": 2,
       "featureId": "scroll-elements",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js"
+        "assets/js/script.js:118:2|scrollY",
+        "assets/js/script.js:118:9|scrollY"
       ],
       "info": {
         "name": "Scroll methods on elements",
@@ -4300,10 +4354,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "61",
@@ -4319,11 +4373,11 @@
       "count": 17,
       "featureId": "active-view-transition",
       "samples": [
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/js/script.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/js/script.js:118:26|add",
+        "assets/js/script.js:118:26|add",
+        "assets/js/script.js:118:43|add",
+        "assets/slitslider/js/jquery.slitslider.js:136:3|size",
+        "assets/slitslider/js/jquery.slitslider.js:136:8|size"
       ],
       "info": {
         "name": "Active view transition",
@@ -4371,11 +4425,11 @@
       "count": 12,
       "featureId": "white-space",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:101:3|css.properties.white-space",
+        "assets/bootstrap/css/bootstrap.css:644:5|css.properties.white-space",
+        "assets/bootstrap/css/bootstrap.css:751:3|css.properties.white-space",
+        "assets/bootstrap/css/bootstrap.css:774:3|css.properties.white-space",
+        "assets/bootstrap/css/bootstrap.css:1825:5|css.properties.white-space"
       ],
       "info": {
         "name": "white-space",
@@ -4421,7 +4475,7 @@
       "count": 1,
       "featureId": "quotes",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:105:3|css.properties.quotes"
       ],
       "info": {
         "name": "Quotes",
@@ -4440,10 +4494,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "87",
@@ -4459,11 +4513,11 @@
       "count": 17,
       "featureId": "vertical-align",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:117:3|css.properties.vertical-align",
+        "assets/bootstrap/css/bootstrap.css:209:3|css.properties.vertical-align",
+        "assets/bootstrap/css/bootstrap.css:340:3|css.properties.vertical-align",
+        "assets/bootstrap/css/bootstrap.css:1659:3|css.properties.vertical-align",
+        "assets/bootstrap/css/bootstrap.css:1664:3|css.properties.vertical-align"
       ],
       "info": {
         "name": "vertical-align",
@@ -4507,11 +4561,11 @@
       "count": 18,
       "featureId": "table",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:213:3|css.properties.border-collapse",
+        "assets/bootstrap/css/bootstrap.css:214:3|css.properties.border-spacing",
+        "assets/bootstrap/css/bootstrap.css:284:5|css.properties.border-collapse",
+        "assets/bootstrap/css/bootstrap.css:3887:3|css.properties.border-collapse",
+        "assets/bootstrap/css/bootstrap.css:3888:3|css.properties.table-layout"
       ],
       "info": {
         "name": "Tables",
@@ -4621,11 +4675,11 @@
       "count": 8,
       "featureId": "text-shadow",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:220:5|css.properties.text-shadow",
+        "assets/bootstrap/css/bootstrap.css:5914:3|css.properties.text-shadow",
+        "assets/bootstrap/css/bootstrap.css:6401:3|css.properties.text-shadow",
+        "assets/bootstrap/css/bootstrap.css:6510:3|css.properties.text-shadow",
+        "assets/bootstrap/css/bootstrap.css:6514:3|css.properties.text-shadow"
       ],
       "info": {
         "name": "text-shadow",
@@ -4663,9 +4717,9 @@
       "count": 3,
       "featureId": "page-break-aliases",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:241:5|css.properties.page-break-inside",
+        "assets/bootstrap/css/bootstrap.css:248:5|css.properties.page-break-inside",
+        "assets/bootstrap/css/bootstrap.css:264:5|css.properties.page-break-after"
       ],
       "info": {
         "name": "Page break aliases",
@@ -4711,8 +4765,8 @@
       "count": 2,
       "featureId": "widows-orphans",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:259:5|css.properties.orphans",
+        "assets/bootstrap/css/bootstrap.css:260:5|css.properties.widows"
       ],
       "info": {
         "name": "Widows and orphans",
@@ -4749,11 +4803,11 @@
       "count": 143,
       "featureId": "background-color",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:274:5|css.properties.background-color",
+        "assets/bootstrap/css/bootstrap.css:310:3|css.properties.background-color",
+        "assets/bootstrap/css/bootstrap.css:359:3|css.properties.background-color",
+        "assets/bootstrap/css/bootstrap.css:752:3|css.properties.background-color",
+        "assets/bootstrap/css/bootstrap.css:765:3|css.properties.background-color"
       ],
       "info": {
         "name": "background-color",
@@ -4789,9 +4843,9 @@
       "count": 3,
       "featureId": "outlines",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:336:3|css.properties.outline-offset",
+        "assets/bootstrap/css/bootstrap.css:1913:3|css.properties.outline-offset",
+        "assets/bootstrap/css/bootstrap.css:2276:3|css.properties.outline-offset"
       ],
       "info": {
         "name": "Outlines",
@@ -4838,7 +4892,7 @@
       "count": 1,
       "featureId": "clip",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:384:3|css.properties.clip"
       ],
       "info": {
         "name": "clip",
@@ -4877,11 +4931,11 @@
       "count": 69,
       "featureId": "float-clear",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:638:5|css.properties.float",
+        "assets/bootstrap/css/bootstrap.css:641:5|css.properties.clear",
+        "assets/bootstrap/css/bootstrap.css:655:5|css.properties.clear",
+        "assets/bootstrap/css/bootstrap.css:663:5|css.properties.clear",
+        "assets/bootstrap/css/bootstrap.css:798:3|css.properties.clear"
       ],
       "info": {
         "name": "float and clear",
@@ -4925,7 +4979,7 @@
       "count": 1,
       "featureId": "text-overflow",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:643:5|css.properties.text-overflow"
       ],
       "info": {
         "name": "Text overflow",
@@ -4967,7 +5021,7 @@
       "count": 1,
       "featureId": "word-break",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:763:3|css.properties.word-break"
       ],
       "info": {
         "name": "word-break",
@@ -5008,11 +5062,11 @@
       "count": 31,
       "featureId": "background-image",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:1940:3|css.properties.background-image",
+        "assets/bootstrap/css/bootstrap.css:2263:3|css.properties.background-image",
+        "assets/bootstrap/css/bootstrap.css:2287:3|css.properties.background-image",
+        "assets/bootstrap/css/bootstrap.css:2323:3|css.properties.background-image",
+        "assets/bootstrap/css/bootstrap.css:2369:3|css.properties.background-image"
       ],
       "info": {
         "name": "background-image",
@@ -5050,7 +5104,7 @@
       "count": 1,
       "featureId": "user-select",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:2270:11|css.properties.user-select"
       ],
       "info": {
         "name": "user-select",
@@ -5090,11 +5144,11 @@
       "count": 12,
       "featureId": "filter",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:2299:3|css.properties.filter",
+        "assets/bootstrap/css/bootstrap.css:3594:3|css.properties.filter",
+        "assets/bootstrap/css/bootstrap.css:5916:3|css.properties.filter",
+        "assets/bootstrap/css/bootstrap.css:5925:3|css.properties.filter",
+        "assets/bootstrap/css/bootstrap.css:5999:3|css.properties.filter"
       ],
       "info": {
         "name": "filter",
@@ -5143,9 +5197,9 @@
       "count": 3,
       "featureId": "background-clip",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:3541:3|css.properties.background-clip",
+        "assets/bootstrap/css/bootstrap.css:5984:3|css.properties.background-clip",
+        "assets/bootstrap/css/bootstrap.css:6208:3|css.properties.background-clip"
       ],
       "info": {
         "name": "background-clip",
@@ -5185,11 +5239,11 @@
       "count": 5,
       "featureId": "background-position",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/slitslider/css/custom.css"
+        "assets/bootstrap/css/bootstrap.css:5392:5|css.properties.background-position",
+        "assets/bootstrap/css/bootstrap.css:5395:5|css.properties.background-position",
+        "assets/bootstrap/css/bootstrap.css:5401:5|css.properties.background-position",
+        "assets/bootstrap/css/bootstrap.css:5404:5|css.properties.background-position",
+        "assets/slitslider/css/custom.css:61:2|css.properties.background-position"
       ],
       "info": {
         "name": "background-position",
@@ -5239,8 +5293,8 @@
       "count": 2,
       "featureId": "background-size",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/slitslider/css/custom.css"
+        "assets/bootstrap/css/bootstrap.css:5436:3|css.properties.background-size",
+        "assets/slitslider/css/custom.css:60:2|css.properties.background-size"
       ],
       "info": {
         "name": "background-size",
@@ -5280,7 +5334,7 @@
       "count": 1,
       "featureId": "zoom",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:5483:3|css.properties.zoom"
       ],
       "info": {
         "name": "zoom",
@@ -5297,10 +5351,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "1",
@@ -5316,8 +5370,8 @@
       "count": 2,
       "featureId": "background-repeat",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:6409:3|css.properties.background-repeat",
+        "assets/bootstrap/css/bootstrap.css:6418:3|css.properties.background-repeat"
       ],
       "info": {
         "name": "background-repeat",
@@ -5363,8 +5417,8 @@
       "count": 2,
       "featureId": "text-indent",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css",
-        "assets/slitslider/css/custom.css"
+        "assets/bootstrap/css/bootstrap.css:6485:3|css.properties.text-indent",
+        "assets/slitslider/css/custom.css:76:2|css.properties.text-indent"
       ],
       "info": {
         "name": "text-indent",
@@ -5402,7 +5456,7 @@
       "count": 1,
       "featureId": "page-setup",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:253:3|css.at-rules.page"
       ],
       "info": {
         "name": "Page setup",
@@ -5441,10 +5495,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "15",
@@ -5460,7 +5514,7 @@
       "count": 1,
       "featureId": "font-face",
       "samples": [
-        "assets/bootstrap/css/bootstrap.css"
+        "assets/bootstrap/css/bootstrap.css:2682:1|css.at-rules.font-face"
       ],
       "info": {
         "name": "@font-face",
@@ -5513,10 +5567,10 @@
       "count": 4,
       "featureId": "explicit-resource-management",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/bootstrap/js/bootstrap.js:7:47|Error",
+        "assets/slitslider/js/jquery.slitslider.js:617:3|error",
+        "assets/slitslider/js/jquery.slitslider.js:617:3|error",
+        "assets/slitslider/js/jquery.slitslider.js:617:18|error"
       ],
       "info": {
         "name": "Explicit resource management",
@@ -5575,11 +5629,11 @@
       "count": 35,
       "featureId": "anchor-positioning",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:44:13|name",
+        "assets/bootstrap/js/bootstrap.js:45:10|name",
+        "assets/bootstrap/js/bootstrap.js:45:19|name",
+        "assets/bootstrap/js/bootstrap.js:46:17|end",
+        "assets/bootstrap/js/bootstrap.js:46:22|name"
       ],
       "info": {
         "name": "Anchor positioning",
@@ -5807,10 +5861,10 @@
       "count": 4,
       "featureId": "style",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/slitslider/js/modernizr.custom.79639.js",
-        "assets/slitslider/js/modernizr.custom.79639.js"
+        "assets/bootstrap/js/bootstrap.js:45:10|style",
+        "assets/bootstrap/js/bootstrap.js:45:13|style",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:672|style",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:674|style"
       ],
       "info": {
         "name": "<style>",
@@ -5850,9 +5904,9 @@
       "count": 3,
       "featureId": "javascript",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/bootstrap/js/bootstrap.js:45:29|undefined",
+        "assets/slitslider/js/jquery.slitslider.js:12:24|undefined",
+        "assets/slitslider/js/jquery.slitslider.js:180:15|undefined"
       ],
       "info": {
         "name": "JavaScript (initial core language support)",
@@ -5989,8 +6043,8 @@
       "count": 2,
       "featureId": "media-source",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:52:40|duration",
+        "assets/bootstrap/js/bootstrap.js:56:25|duration"
       ],
       "info": {
         "name": "Media source",
@@ -6094,11 +6148,11 @@
       "count": 10,
       "featureId": "navigation",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:54:16|transition",
+        "assets/bootstrap/js/bootstrap.js:54:26|transition",
+        "assets/bootstrap/js/bootstrap.js:55:61|transition",
+        "assets/bootstrap/js/bootstrap.js:55:71|transition",
+        "assets/bootstrap/js/bootstrap.js:61:4|transition"
       ],
       "info": {
         "name": "Navigation API",
@@ -6186,11 +6240,11 @@
       "count": 18,
       "featureId": "settimeout",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/bootstrap/js/bootstrap.js:56:4|setTimeout",
+        "assets/bootstrap/js/bootstrap.js:56:4|setTimeout",
+        "assets/slitslider/js/jquery.slitslider.js:47:4|clearTimeout",
+        "assets/slitslider/js/jquery.slitslider.js:47:4|clearTimeout",
+        "assets/slitslider/js/jquery.slitslider.js:52:20|setTimeout"
       ],
       "info": {
         "name": "setTimeout()",
@@ -6227,11 +6281,11 @@
       "count": 8,
       "featureId": "alerts",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:92:6|Alert",
+        "assets/bootstrap/js/bootstrap.js:96:2|Alert",
+        "assets/bootstrap/js/bootstrap.js:96:2|Alert",
+        "assets/bootstrap/js/bootstrap.js:134:12|alert",
+        "assets/bootstrap/js/bootstrap.js:134:17|alert"
       ],
       "info": {
         "name": "Alerts",
@@ -6267,10 +6321,10 @@
       "count": 4,
       "featureId": "broadcast-channel",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:93:31|close",
+        "assets/bootstrap/js/bootstrap.js:93:36|close",
+        "assets/bootstrap/js/bootstrap.js:96:2|close",
+        "assets/bootstrap/js/bootstrap.js:96:18|close"
       ],
       "info": {
         "name": "BroadcastChannel",
@@ -6295,10 +6349,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "54",
@@ -6314,11 +6368,11 @@
       "count": 33,
       "featureId": "calc-constants",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:96:36|e",
+        "assets/bootstrap/js/bootstrap.js:107:8|e",
+        "assets/bootstrap/js/bootstrap.js:107:11|e",
+        "assets/bootstrap/js/bootstrap.js:107:11|e",
+        "assets/bootstrap/js/bootstrap.js:113:20|e"
       ],
       "info": {
         "name": "calc() keywords",
@@ -6339,10 +6393,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "110",
@@ -6358,11 +6412,11 @@
       "count": 8,
       "featureId": "supports",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:98:8|selector",
+        "assets/bootstrap/js/bootstrap.js:100:9|selector",
+        "assets/bootstrap/js/bootstrap.js:101:6|selector",
+        "assets/bootstrap/js/bootstrap.js:102:6|selector",
+        "assets/bootstrap/js/bootstrap.js:102:17|selector"
       ],
       "info": {
         "name": "@supports",
@@ -6406,11 +6460,11 @@
       "count": 6,
       "featureId": "attr",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:98:19|attr",
+        "assets/bootstrap/js/bootstrap.js:98:19|attr",
+        "assets/bootstrap/js/bootstrap.js:98:25|attr",
+        "assets/bootstrap/js/bootstrap.js:101:17|attr",
+        "assets/bootstrap/js/bootstrap.js:101:17|attr"
       ],
       "info": {
         "name": "attr()",
@@ -6450,9 +6504,9 @@
       "count": 3,
       "featureId": "constructed-stylesheets",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:102:29|replace",
+        "assets/bootstrap/js/bootstrap.js:102:29|replace",
+        "assets/bootstrap/js/bootstrap.js:102:38|replace"
       ],
       "info": {
         "name": "Constructed stylesheets",
@@ -6473,10 +6527,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "73",
@@ -6492,10 +6546,10 @@
       "count": 4,
       "featureId": "sanitizer",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:119:13|removeElement",
+        "assets/bootstrap/js/bootstrap.js:125:39|removeElement",
+        "assets/bootstrap/js/bootstrap.js:127:6|removeElement",
+        "assets/bootstrap/js/bootstrap.js:127:6|removeElement"
       ],
       "info": {
         "name": "Sanitizer API",
@@ -6534,10 +6588,10 @@
       "count": 4,
       "featureId": "select",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:136:25|option",
+        "assets/bootstrap/js/bootstrap.js:142:17|option",
+        "assets/bootstrap/js/bootstrap.js:142:37|option",
+        "assets/bootstrap/js/bootstrap.js:142:42|option"
       ],
       "info": {
         "name": "<select>",
@@ -6624,11 +6678,11 @@
       "count": 26,
       "featureId": "data",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js"
+        "assets/bootstrap/js/bootstrap.js:139:10|data",
+        "assets/bootstrap/js/bootstrap.js:139:18|data",
+        "assets/bootstrap/js/bootstrap.js:139:18|data",
+        "assets/bootstrap/js/bootstrap.js:139:24|data",
+        "assets/bootstrap/js/bootstrap.js:141:11|data"
       ],
       "info": {
         "name": "<data>",
@@ -6667,11 +6721,11 @@
       "count": 30,
       "featureId": "functions",
       "samples": [
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/bootstrap/js/bootstrap.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js"
+        "assets/bootstrap/js/bootstrap.js:142:37|call",
+        "assets/bootstrap/js/bootstrap.js:142:37|call",
+        "assets/bootstrap/js/bootstrap.js:142:50|call",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:42|arguments",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:120|call"
       ],
       "info": {
         "name": "Functions",
@@ -6745,11 +6799,11 @@
       "count": 33,
       "featureId": "b",
       "samples": [
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/modernizr.custom.79639.js"
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:52|b",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:72|b",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:88|b",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:97|b",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:29|b"
       ],
       "info": {
         "name": "<b>",
@@ -6785,11 +6839,11 @@
       "count": 51,
       "featureId": "dom-geometry",
       "samples": [
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js",
-        "assets/slitslider/js/jquery.ba-cond.min.js"
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:56|f",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:58|d",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:60|c",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:69|f",
+        "assets/slitslider/js/jquery.ba-cond.min.js:12:84|f"
       ],
       "info": {
         "name": "DOM Geometry",
@@ -6943,10 +6997,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2022,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "61",
@@ -6962,11 +7016,11 @@
       "count": 5,
       "featureId": "web-audio",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:38:7|context",
+        "assets/slitslider/js/jquery.slitslider.js:43:28|context",
+        "assets/slitslider/js/jquery.slitslider.js:52:42|threshold",
+        "assets/slitslider/js/jquery.slitslider.js:52:51|threshold",
+        "assets/slitslider/js/jquery.slitslider.js:54:2|threshold"
       ],
       "info": {
         "name": "Web Audio",
@@ -7188,10 +7242,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "35",
@@ -7207,11 +7261,11 @@
       "count": 6,
       "featureId": "webnn",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:40:4|dispatch",
+        "assets/slitslider/js/jquery.slitslider.js:43:5|dispatch",
+        "assets/slitslider/js/jquery.slitslider.js:43:12|dispatch",
+        "assets/slitslider/js/jquery.slitslider.js:51:4|dispatch",
+        "assets/slitslider/js/jquery.slitslider.js:51:4|dispatch"
       ],
       "info": {
         "name": "WebNN",
@@ -7339,11 +7393,11 @@
       "count": 67,
       "featureId": "datalist",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:62:26|options",
+        "assets/slitslider/js/jquery.slitslider.js:65:14|options",
+        "assets/slitslider/js/jquery.slitslider.js:93:20|options",
+        "assets/slitslider/js/jquery.slitslider.js:96:3|options",
+        "assets/slitslider/js/jquery.slitslider.js:96:8|options"
       ],
       "info": {
         "name": "<datalist>",
@@ -7382,8 +7436,8 @@
       "count": 2,
       "featureId": "element",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:62:35|element",
+        "assets/slitslider/js/jquery.slitslider.js:64:23|element"
       ],
       "info": {
         "name": "element()",
@@ -7412,9 +7466,9 @@
       "count": 3,
       "featureId": "geolocation",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:71:2|speed",
+        "assets/slitslider/js/jquery.slitslider.js:254:28|speed",
+        "assets/slitslider/js/jquery.slitslider.js:254:41|speed"
       ],
       "info": {
         "name": "Geolocation",
@@ -7478,11 +7532,11 @@
       "count": 11,
       "featureId": "audio",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:81:2|autoplay",
+        "assets/slitslider/js/jquery.slitslider.js:126:7|autoplay",
+        "assets/slitslider/js/jquery.slitslider.js:126:20|autoplay",
+        "assets/slitslider/js/jquery.slitslider.js:467:9|autoplay",
+        "assets/slitslider/js/jquery.slitslider.js:467:22|autoplay"
       ],
       "info": {
         "name": "<audio>",
@@ -7530,9 +7584,9 @@
       "count": 3,
       "featureId": "keyboard-lock",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:83:2|keyboard",
+        "assets/slitslider/js/jquery.slitslider.js:426:8|keyboard",
+        "assets/slitslider/js/jquery.slitslider.js:426:21|keyboard"
       ],
       "info": {
         "name": "Keyboard lock",
@@ -7565,9 +7619,9 @@
       "count": 3,
       "featureId": "device-orientation-events",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:85:2|interval",
+        "assets/slitslider/js/jquery.slitslider.js:473:6|interval",
+        "assets/slitslider/js/jquery.slitslider.js:473:19|interval"
       ],
       "info": {
         "name": "Device orientation events",
@@ -7610,10 +7664,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "31",
@@ -7629,9 +7683,9 @@
       "count": 3,
       "featureId": "selection-api",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:96:18|extend",
+        "assets/slitslider/js/jquery.slitslider.js:96:18|extend",
+        "assets/slitslider/js/jquery.slitslider.js:96:20|extend"
       ],
       "info": {
         "name": "Selection",
@@ -7746,11 +7800,11 @@
       "count": 18,
       "featureId": "bfcache-blocking-reasons",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:110:14|children",
+        "assets/slitslider/js/jquery.slitslider.js:110:14|children",
+        "assets/slitslider/js/jquery.slitslider.js:110:30|children",
+        "assets/slitslider/js/jquery.slitslider.js:112:18|children",
+        "assets/slitslider/js/jquery.slitslider.js:112:18|children"
       ],
       "info": {
         "name": "Back/forward cache blocking reasons",
@@ -7793,11 +7847,11 @@
       "count": 20,
       "featureId": "gamepad-vr",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:151:5|orientation",
+        "assets/slitslider/js/jquery.slitslider.js:153:35|orientation",
+        "assets/slitslider/js/jquery.slitslider.js:208:3|orientation",
+        "assets/slitslider/js/jquery.slitslider.js:208:10|orientation",
+        "assets/slitslider/js/jquery.slitslider.js:208:24|orientation"
       ],
       "info": {
         "name": "Gamepad VR hands and poses",
@@ -7839,11 +7893,11 @@
       "count": 9,
       "featureId": "dialog",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:163:3|show",
+        "assets/slitslider/js/jquery.slitslider.js:163:3|show",
+        "assets/slitslider/js/jquery.slitslider.js:163:35|show",
+        "assets/slitslider/js/jquery.slitslider.js:345:3|show",
+        "assets/slitslider/js/jquery.slitslider.js:345:3|show"
       ],
       "info": {
         "name": "<dialog>",
@@ -7873,10 +7927,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "37",
@@ -7892,11 +7946,11 @@
       "count": 11,
       "featureId": "dir-pseudo",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:166:24|dir",
+        "assets/slitslider/js/jquery.slitslider.js:186:12|dir",
+        "assets/slitslider/js/jquery.slitslider.js:191:12|dir",
+        "assets/slitslider/js/jquery.slitslider.js:202:21|dir",
+        "assets/slitslider/js/jquery.slitslider.js:263:7|dir"
       ],
       "info": {
         "name": ":dir()",
@@ -7915,10 +7969,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2023,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "120",
@@ -7934,11 +7988,11 @@
       "count": 48,
       "featureId": "dedicated-workers",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:176:7|self",
+        "assets/slitslider/js/jquery.slitslider.js:298:13|self",
+        "assets/slitslider/js/jquery.slitslider.js:298:13|self",
+        "assets/slitslider/js/jquery.slitslider.js:300:38|self",
+        "assets/slitslider/js/jquery.slitslider.js:300:38|self"
       ],
       "info": {
         "name": "Dedicated workers",
@@ -8006,11 +8060,11 @@
       "count": 65,
       "featureId": "fencedframe",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:206:4|config",
+        "assets/slitslider/js/jquery.slitslider.js:208:3|config",
+        "assets/slitslider/js/jquery.slitslider.js:208:3|config",
+        "assets/slitslider/js/jquery.slitslider.js:209:3|config",
+        "assets/slitslider/js/jquery.slitslider.js:209:3|config"
       ],
       "info": {
         "name": "<fencedframe>",
@@ -8060,11 +8114,11 @@
       "count": 38,
       "featureId": "css-object-model",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:258:3|css",
+        "assets/slitslider/js/jquery.slitslider.js:258:3|css",
+        "assets/slitslider/js/jquery.slitslider.js:258:3|css",
+        "assets/slitslider/js/jquery.slitslider.js:258:3|css",
+        "assets/slitslider/js/jquery.slitslider.js:258:16|css"
       ],
       "info": {
         "name": "CSS object model",
@@ -8182,11 +8236,11 @@
       "count": 18,
       "featureId": "array-find",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:258:3|find",
+        "assets/slitslider/js/jquery.slitslider.js:258:3|find",
+        "assets/slitslider/js/jquery.slitslider.js:258:3|find",
+        "assets/slitslider/js/jquery.slitslider.js:258:3|find",
+        "assets/slitslider/js/jquery.slitslider.js:259:7|find"
       ],
       "info": {
         "name": "Array find() and findIndex()",
@@ -8232,9 +8286,9 @@
       "count": 3,
       "featureId": "box-decoration-break",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:258:3|clone",
+        "assets/slitslider/js/jquery.slitslider.js:258:3|clone",
+        "assets/slitslider/js/jquery.slitslider.js:286:7|clone"
       ],
       "info": {
         "name": "box-decoration-break",
@@ -8270,11 +8324,11 @@
       "count": 32,
       "featureId": "array",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:266:12|slice",
+        "assets/slitslider/js/jquery.slitslider.js:270:9|slice",
+        "assets/slitslider/js/jquery.slitslider.js:270:9|slice",
+        "assets/slitslider/js/jquery.slitslider.js:277:12|slice",
+        "assets/slitslider/js/jquery.slitslider.js:280:9|slice"
       ],
       "info": {
         "name": "Array (initial support)",
@@ -8337,8 +8391,8 @@
       "count": 2,
       "featureId": "scroll-buttons",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:433:7|up",
+        "assets/slitslider/js/jquery.slitslider.js:435:7|down"
       ],
       "info": {
         "name": "::scroll-button",
@@ -8377,7 +8431,7 @@
       "count": 1,
       "featureId": "async-generators",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:545:2|next"
       ],
       "info": {
         "name": "Async generators",
@@ -8403,10 +8457,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2022,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "63",
@@ -8422,7 +8476,7 @@
       "count": 1,
       "featureId": "mediacontroller",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:575:2|play"
       ],
       "info": {
         "name": "MediaController",
@@ -8467,7 +8521,7 @@
       "count": 1,
       "featureId": "atomics-pause",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:589:2|pause"
       ],
       "info": {
         "name": "Atomics.pause()",
@@ -8482,10 +8536,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "low",
-        "achievedAtYear": 2025,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "133",
@@ -8501,7 +8555,7 @@
       "count": 1,
       "featureId": "closewatcher",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:605:2|destroy"
       ],
       "info": {
         "name": "CloseWatcher",
@@ -8537,10 +8591,10 @@
       "count": 4,
       "featureId": "console",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js"
+        "assets/slitslider/js/jquery.slitslider.js:615:7|console",
+        "assets/slitslider/js/jquery.slitslider.js:615:14|console",
+        "assets/slitslider/js/jquery.slitslider.js:617:3|console",
+        "assets/slitslider/js/jquery.slitslider.js:617:10|console"
       ],
       "info": {
         "name": "Console",
@@ -8599,11 +8653,11 @@
       "count": 15,
       "featureId": "strings",
       "samples": [
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/jquery.slitslider.js",
-        "assets/slitslider/js/modernizr.custom.79639.js",
-        "assets/slitslider/js/modernizr.custom.79639.js"
+        "assets/slitslider/js/jquery.slitslider.js:641:43|charAt",
+        "assets/slitslider/js/jquery.slitslider.js:641:43|charAt",
+        "assets/slitslider/js/jquery.slitslider.js:641:51|charAt",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:423|toUpperCase",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:423|toUpperCase"
       ],
       "info": {
         "name": "String (initial support)",
@@ -8661,9 +8715,9 @@
       "count": 3,
       "featureId": "accelerometer",
       "samples": [
-        "assets/slitslider/js/modernizr.custom.79639.js",
-        "assets/slitslider/js/modernizr.custom.79639.js",
-        "assets/slitslider/js/modernizr.custom.79639.js"
+        "assets/slitslider/js/modernizr.custom.79639.js:4:43|z",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:83|z",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:83|z"
       ],
       "info": {
         "name": "Accelerometer",
@@ -8706,9 +8760,9 @@
       "count": 3,
       "featureId": "array-iteration-methods",
       "samples": [
-        "assets/slitslider/js/modernizr.custom.79639.js",
-        "assets/slitslider/js/modernizr.custom.79639.js",
-        "assets/slitslider/js/modernizr.custom.79639.js"
+        "assets/slitslider/js/modernizr.custom.79639.js:4:169|indexOf",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:169|indexOf",
+        "assets/slitslider/js/modernizr.custom.79639.js:4:176|indexOf"
       ],
       "info": {
         "name": "Array iteration methods",
@@ -8760,7 +8814,7 @@
       "count": 1,
       "featureId": "svg",
       "samples": [
-        "assets/slitslider/js/modernizr.custom.79639.js"
+        "assets/slitslider/js/modernizr.custom.79639.js:4:615|g"
       ],
       "info": {
         "name": "SVG",
@@ -9373,10 +9427,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2022,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "1",
@@ -9392,7 +9446,7 @@
       "count": 1,
       "featureId": "transforms3d",
       "samples": [
-        "assets/slitslider/css/style.css"
+        "assets/slitslider/css/style.css:44:2|css.properties.backface-visibility"
       ],
       "info": {
         "name": "3D transforms",
@@ -9432,10 +9486,10 @@
         ]
       },
       "baseline": {
-        "inBaseline": true,
-        "achieved": "high",
-        "achievedAtYear": 2024,
-        "reason": "meets threshold"
+        "inBaseline": false,
+        "achieved": "none",
+        "achievedAtYear": null,
+        "reason": "below threshold"
       },
       "support": {
         "chrome": "36",
@@ -9448,5 +9502,5 @@
       }
     }
   },
-  "generatedAt": "2025-10-03T09:25:20.248Z"
+  "generatedAt": "2025-10-04T09:45:48.043Z"
 }

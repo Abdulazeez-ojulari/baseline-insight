@@ -22,18 +22,18 @@ function extractJsFeatures(code: string): string[] {
   let ast;
   try {
     ast = jsparse(code, {
-    sourceType: "unambiguous",
-    plugins: [
-      "typescript",
-      "jsx",
-      "classProperties",
-      "objectRestSpread",
-      "optionalChaining",
-      "nullishCoalescingOperator",
-      "dynamicImport",
-    ],
-    errorRecovery: true
-  });
+      sourceType: "unambiguous",
+      plugins: [
+        "typescript",
+        "jsx",
+        "classProperties",
+        "objectRestSpread",
+        "optionalChaining",
+        "nullishCoalescingOperator",
+        "dynamicImport",
+      ],
+      errorRecovery: true
+    });
   } catch (err) {
     // console.warn("AST parse failed, falling back to regex", err);
     return code.match(tokenRegex) || [];
@@ -41,22 +41,42 @@ function extractJsFeatures(code: string): string[] {
 
   traverse(ast, {
     Identifier(path) {
-      features.push(path.node.name)
+      if(path.node.loc){
+        features.push(`${path.node.name}|${path.node.loc?.start.line}:${path.node.loc?.start.column}`)
+      }else{
+        features.push(`${path.node.name}`)
+      }
     },
     MemberExpression(path) {
       if (t.isIdentifier(path.node.property)) {
-        features.push(path.node.property.name)
+        if(path.node.loc){
+          features.push(`${path.node.property.name}|${path.node.loc?.start.line}:${path.node.loc?.start.column}`)
+        }else{
+          features.push(`${path.node.property.name}`)
+        }
       }
       if (t.isIdentifier(path.node.object)) {
-        features.push(path.node.object.name)
+        if(path.node.loc){
+          features.push(`${path.node.object.name}|${path.node.loc?.start.line}:${path.node.loc?.start.column}`)
+        }else{
+          features.push(`${path.node.object.name}`)
+        }
       }
     },
     CallExpression(path) {
       if (t.isIdentifier(path.node.callee)) {
-        features.push(path.node.callee.name)
+        if(path.node.loc){
+          features.push(`${path.node.callee.name}|${path.node.loc.start.line}:${path.node.loc.start.column}`)
+        }else{
+          features.push(`${path.node.callee.name}`)
+        }
       }
       if (t.isMemberExpression(path.node.callee) && t.isIdentifier(path.node.callee.property)) {
-        features.push(path.node.callee.property.name)
+        if(path.node.loc){
+          features.push(`${path.node.callee.property.name}|${path.node.loc.start.line}:${path.node.loc.start.column}`)
+        }else{
+          features.push(`${path.node.callee.property.name}`)
+        }
       }
     },
   });
@@ -72,16 +92,17 @@ function extractJsFeatures(code: string): string[] {
 }
 
 function extractHtmlFeatures(html: string): string[] {
-  const document = parse(html);
+  const document = parse(html, { sourceCodeLocationInfo: true });
   const features: string[] = [];
 
   function walk(node: any) {
     if (node.tagName) {
-      features.push(`html.elements.${node.tagName}`);
+      features.push(`html.elements.${node.tagName}|${node.sourceCodeLocation.startLine}:${node.sourceCodeLocation.startCol}`);
 
       if (node.attrs) {
         node.attrs.forEach((attr: any) => {
-          features.push(`html.attributes.${node.tagName}.${attr.name}`);
+          const sourceCodeLocation = node.sourceCodeLocation.attrs[attr.name]
+          features.push(`html.elements.${node.tagName}.${attr.name}|${sourceCodeLocation.startLine}:${sourceCodeLocation.startCol}`);
         });
       }
     }
@@ -100,11 +121,19 @@ function extractCssFeatures(css: string): string[] {
   const features: string[] = [];
 
   root.walkDecls(decl => {
-    features.push(`css.properties.${decl.prop}`);
+    if(decl.source && decl.source.start){
+      features.push(`css.properties.${decl.prop}|${decl.source.start.line}:${decl.source.start.column}`);
+    }else {
+      features.push(`css.properties.${decl.prop}`);
+    }
   });
 
   root.walkAtRules(rule => {
-    features.push(`css.at-rules.${rule.name}`);
+    if(rule.source && rule.source.start){
+      features.push(`css.at-rules.${rule.name}|${rule.source.start.line}:${rule.source.start.column}`);
+    }else {
+      features.push(`css.at-rules.${rule.name}`);
+    }
   });
 
   return features;
@@ -167,9 +196,8 @@ program
         const tokens = extractFeatures(content, extname);
         for(const token of tokens){
           // console.log(token)
-          const featureKey = (core.findFeature(token)) || core.findFeatureByBCD(token);
-          if(featureKey == 'proxy-reflect')
-          console.log(featureKey, token)
+          const featureKey = (core.findFeature(token.split('|')[0])) || core.findFeatureByBCD(token.split('|')[0]);
+          // console.log(featureKey, token)
           if (featureKey) {
             // if (!found[featureKey]) found[featureKey] = { count: 0, samples: [], baseline: null };
             if (!found[featureKey]) {
@@ -179,12 +207,12 @@ program
                 featureId: featureKey,
                 samples: [],
                 info,
-                baseline: core.isFeatureInBaseline(featureKey, { year: new Date().getUTCFullYear() }),
+                baseline: core.isFeatureInBaseline(featureKey, { year: opts.year, minBaseline: 'low' }),
                 support: core.getFeatureSupport(featureKey),
               };
             }
             found[featureKey].count++;
-            if (found[featureKey].samples.length < 5) found[featureKey].samples.push(`${rel}`);
+            if (found[featureKey].samples.length < 5) found[featureKey].samples.push(`${rel}:${token.split('|')[1]}|${token.split('|')[0]}`);
           }
         }
 
@@ -197,7 +225,7 @@ program
     // console.log(entries)
     for (const key of Object.keys(found)) {
       // console.log(key)
-      const info = core.isFeatureInBaseline(key, opts.year);
+      const info = core.isFeatureInBaseline(key, { year: opts.year, minBaseline: 'low' });
       found[key].baseline = info;
     }
 

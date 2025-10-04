@@ -1,6 +1,8 @@
 // src/components/BaselineReport.tsx
 import React, { useEffect, useState } from "react";
 import { PageTable } from "./component/PageTable";
+import { Popover } from 'antd';
+import MoreIcon from "./assets/icons/MoreIcon";
 // import reportData from "../baseline-report.json";
 
 type Feature = {
@@ -143,6 +145,46 @@ const BaselineReport: React.FC = () => {
           <span className="">
             <p className="">{record?.baseline.reason ?? "-"}</p>
           </span>
+        );
+      },
+    },
+    {
+      title: () => {
+        return (
+          <p className="text-[0.8rem] font-medium font-[satoshi-medium] text-[#213547]">
+            More
+          </p>
+        );
+      },
+      key: "4",
+      fixed: "right",
+      width: 80,
+      render: (_: any, record: Feature) => {
+        return (
+          <div>
+            <Popover
+              trigger={"hover"}
+              placement="topLeft"
+              content={
+                <ul className="list-disc pl-5">
+                  {record.samples.map((s, i) => {
+                    const [filePart, feature] = s.split("|");
+                    const [file, line, column] = filePart.split(":");
+                    return (
+                      <li key={i}>
+                        <span className="font-mono">{file}:{line},{column}</span> → 
+                        <span className="text-blue-600">{feature}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              }
+            >
+              <div>
+                <MoreIcon />
+              </div>
+            </Popover>
+          </div>
         );
       },
     },

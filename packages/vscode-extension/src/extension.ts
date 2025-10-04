@@ -30,15 +30,15 @@ export function activate(context: vscode.ExtensionContext) {
         const lines = [];
 
         try{
-          console.log(lineText, word)
+        //   console.log(lineText, word)
           const tokens = extractFeatures(document.fileName, lineText, word)
-          console.log(tokens)
+        //   console.log(tokens)
 
           for(const token of tokens){
             const featureKey = core.findFeature(token) ?? core.findFeatureByBCD(token);
             if (!featureKey) continue;
 
-            const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear });
+            const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear, minBaseline: 'high' });
             const info = core.getFeatureInfo(featureKey);
             const support = core.getFeatureSupport(featureKey);
 
@@ -70,24 +70,25 @@ function mdnLinkForFeature(featureKey: string) {
 
 const tokenRegex = /\b([A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)+)\b/g;
 
-function extractJsFeatures(code: string): string[] {
+function extractJsFeatures(code: string, word: string): string[] {
   const features: string[] = [];
 
   let ast;
   try {
     ast = jsparse(code, {
-    sourceType: "unambiguous",
-    plugins: [
-      "typescript",
-      "jsx",
-      "classProperties",
-      "objectRestSpread",
-      "optionalChaining",
-      "nullishCoalescingOperator",
-      "dynamicImport",
-    ],
-    errorRecovery: true
-  });
+      sourceType: "unambiguous",
+      plugins: [
+        "typescript",
+        "jsx",
+        "classProperties",
+        "objectRestSpread",
+        "optionalChaining",
+        "nullishCoalescingOperator",
+        "dynamicImport",
+      ],
+      errorRecovery: true
+    });
+
   } catch (err) {
     // console.warn("AST parse failed, falling back to regex", err);
     return code.match(tokenRegex) || [];
@@ -96,31 +97,33 @@ function extractJsFeatures(code: string): string[] {
   traverse(ast, {
     Identifier(path) {
       // features.push(path.node.name)
-        console.log('path.node.name', path.node.name)
+        // console.log('path.node.name', path.node.name)
     },
     MemberExpression(path) {
       if (t.isIdentifier(path.node.property)) {
         features.push(path.node.property.name)
-        console.log('path.node.property.name', path.node.property.name)
+        // console.log('path.node.property.name', path.node.property.name)
       }
       if (t.isIdentifier(path.node.object)) {
-        console.log('path.node.object.name', path.node.object.name)
+        // console.log('path.node.object.name', path.node.object.name)
         features.push(path.node.object.name)
       }
     },
     CallExpression(path) {
       if (t.isIdentifier(path.node.callee)) {
         features.push(path.node.callee.name)
-        console.log('path.node.callee.name', path.node.callee.name)
+        // console.log('path.node.callee.name', path.node.callee.name)
       }
       if (t.isMemberExpression(path.node.callee) && t.isIdentifier(path.node.callee.property)) {
         features.push(path.node.callee.property.name)
-        console.log('path.node.callee.property.name', path.node.callee.property.name)
+        // console.log('path.node.callee.property.name', path.node.callee.property.name)
       }
     },
   });
 
-  return features;
+  let feature = features.filter(feature => feature.endsWith(word))
+
+  return feature;
 
   // const features: string[] = [];
   // let match;
@@ -140,7 +143,7 @@ function extractHtmlFeatures(html: string, word: string): string[] {
 
       if (node.attrs) {
         node.attrs.forEach((attr: any) => {
-          features.push(`html.attributes.${node.tagName}.${attr.name}`);
+          features.push(`html.elements.${node.tagName}.${attr.name}`);
         });
       }
     }
@@ -185,13 +188,13 @@ export function extractFeatures(
   }else if(file.endsWith('.css')){
     return extractCssFeatures(code);
   }else if(file.endsWith('.ts')) {
-    return extractJsFeatures(code);
+    return extractJsFeatures(code, word);
   }else if(file.endsWith('.tsx')) {
-    return extractJsFeatures(code);
+    return extractJsFeatures(code, word);
   }else if(file.endsWith('.js')) {
-    return extractJsFeatures(code);
+    return extractJsFeatures(code, word);
   }else if(file.endsWith('.jsx')) {
-    return extractJsFeatures(code);
+    return extractJsFeatures(code, word);
   }else {
     return []
   }

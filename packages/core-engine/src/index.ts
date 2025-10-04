@@ -146,6 +146,9 @@ function isFeatureInBaseline(
 
   const highYear = parseYear(status.baseline_high_date ?? null);
   const lowYear = parseYear(status.baseline_low_date ?? null);
+  // console.log('highYear', 'lowYear')
+  // console.log(highYear, lowYear)
+  // console.log(status.baseline)
 
   let achievedLevel: "none" | "low" | "high" = "none";
   let achievedAtYear: number | null = null;
@@ -156,13 +159,11 @@ function isFeatureInBaseline(
   } else if (lowYear !== null && lowYear <= year) {
     achievedLevel = "low";
     achievedAtYear = lowYear;
-  } else {
+  } else if (highYear === null && lowYear === null) {
     if (status.baseline === "high") {
       achievedLevel = "high";
-      achievedAtYear = parseYear(status.baseline_high_date ?? status.baseline_low_date ?? null);
     } else if (status.baseline === "low") {
       achievedLevel = "low";
-      achievedAtYear = parseYear(status.baseline_low_date ?? null);
     }
   }
 
