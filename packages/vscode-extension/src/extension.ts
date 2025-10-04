@@ -8,196 +8,274 @@ import * as t from "@babel/types";
 
 export function activate(context: vscode.ExtensionContext) {
 
-  const baselineYear = vscode.workspace.getConfiguration("baselineInsight").get("year", "2017");
+    const baselineYear = vscode.workspace.getConfiguration("baselineInsight").get("year", "2017");
 
-  const hoverProvider = vscode.languages.registerHoverProvider(
-    [
-      { scheme: "file", language: "javascript" }, 
-      { scheme: "file", language: "typescript" }, 
-      { scheme: "file", language: "css" }, 
-      { scheme: "file", language: "html" },
-      { scheme: "file", language: "typescriptreact" },
-      { scheme: "file", language: "javascriptreact" },
-    ],
-    {
-      provideHover(document, position) {
-        const lineText = document.lineAt(position.line).text;
+    const hoverProvider = vscode.languages.registerHoverProvider(
+        [
+        { scheme: "file", language: "javascript" }, 
+        { scheme: "file", language: "typescript" }, 
+        { scheme: "file", language: "css" }, 
+        { scheme: "file", language: "html" },
+        { scheme: "file", language: "typescriptreact" },
+        { scheme: "file", language: "javascriptreact" },
+        ],
+        {
+        provideHover(document, position) {
+            const lineText = document.lineAt(position.line).text;
 
-        const wordRange = document.getWordRangeAtPosition(position);
-        if (!wordRange) return;
-        const word = document.getText(wordRange);
+            const wordRange = document.getWordRangeAtPosition(position);
+            if (!wordRange) return;
+            const word = document.getText(wordRange);
 
-        const lines = [];
+            const lines = [];
 
-        try{
-        //   console.log(lineText, word)
-          const tokens = extractFeatures(document.fileName, lineText, word)
-        //   console.log(tokens)
+            try{
+                //   console.log(lineText, word)
+                const tokens = extractFeatures(document.fileName, lineText, word)
+                //   console.log(tokens)
 
-          for(const token of tokens){
-            const featureKey = core.findFeature(token) ?? core.findFeatureByBCD(token);
-            if (!featureKey) continue;
+                for(const token of tokens){
+                    const featureKey = core.findFeature(token.split('|')[0]) ?? core.findFeatureByBCD(token.split('|')[0]);
+                    if (!featureKey) continue;
 
-            const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear, minBaseline: 'high' });
-            const info = core.getFeatureInfo(featureKey);
-            const support = core.getFeatureSupport(featureKey);
+                    const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear, minBaseline: 'high' });
+                    const info = core.getFeatureInfo(featureKey);
+                    const support = core.getFeatureSupport(featureKey);
 
-            lines.push(`**Baseline Insight** — \`${featureKey}\``);
-            lines.push(`- In Baseline ${baselineYear}: **${baseline.inBaseline ? "Yes" : "No"}**`);
-            if (baseline.reason) lines.push(`- Reason: ${baseline.reason}`);
-            if (info?.description) lines.push(`- Description: ${info.description}`);
-            // if (support?.spec) lines.push(`- Spec: ${support.spec}`);
-            lines.push(`\n[Open MDN](${mdnLinkForFeature(featureKey)})`);
-          }
-        }catch (err){}
-        
-        const contents = new vscode.MarkdownString()
-        contents.appendMarkdown(lines.join("\n\n"))
+                    lines.push(`**Baseline Insight** — \`${featureKey}\``);
+                    lines.push(`- In Baseline ${baselineYear}: **${baseline.inBaseline ? "Yes" : "No"}**`);
+                    if (baseline.reason) lines.push(`- Reason: ${baseline.reason}`);
+                    if (info?.description) lines.push(`- Description: ${info.description}`);
+                    // if (support?.spec) lines.push(`- Spec: ${support.spec}`);
+                    lines.push(`\n[Open MDN](${mdnLinkForFeature(featureKey)})`);
+                }
+            }catch (err){console.log(err)}
+            
+            const contents = new vscode.MarkdownString()
+            contents.appendMarkdown(lines.join("\n\n"))
 
-        contents.isTrusted = true;
-        return new vscode.Hover(contents, wordRange);
-      }
+            contents.isTrusted = true;
+            return new vscode.Hover(contents, wordRange);
+        }
+        }
+    );
+
+    context.subscriptions.push(hoverProvider);
+
+    const diagnosticCollection = vscode.languages.createDiagnosticCollection("baseline-insight");
+    context.subscriptions.push(diagnosticCollection);
+
+    vscode.workspace.onDidSaveTextDocument((doc) => {
+        scanDocumentForDiagnostics(doc, diagnosticCollection, baselineYear);
+    });
+
+    if (vscode.window.activeTextEditor) {
+        scanDocumentForDiagnostics(vscode.window.activeTextEditor.document, diagnosticCollection, baselineYear);
     }
-  );
-
-  context.subscriptions.push(hoverProvider);
 }
 
 function mdnLinkForFeature(featureKey: string) {
-  const q = encodeURIComponent(featureKey);
-  return `https://developer.mozilla.org/en-US/search?q=${q}`;
+    const q = encodeURIComponent(featureKey);
+    return `https://developer.mozilla.org/en-US/search?q=${q}`;
 }
 
 const tokenRegex = /\b([A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)+)\b/g;
 
-function extractJsFeatures(code: string, word: string): string[] {
-  const features: string[] = [];
+function extractJsFeatures(code: string, word?: string): string[] {
+    let features: string[] = [];
 
-  let ast;
-  try {
-    ast = jsparse(code, {
-      sourceType: "unambiguous",
-      plugins: [
-        "typescript",
-        "jsx",
-        "classProperties",
-        "objectRestSpread",
-        "optionalChaining",
-        "nullishCoalescingOperator",
-        "dynamicImport",
-      ],
-      errorRecovery: true
+    let ast;
+    try {
+        ast = jsparse(code, {
+        sourceType: "unambiguous",
+        plugins: [
+            "typescript",
+            "jsx",
+            "classProperties",
+            "objectRestSpread",
+            "optionalChaining",
+            "nullishCoalescingOperator",
+            "dynamicImport",
+        ],
+        errorRecovery: true
+        });
+
+    } catch (err) {
+        // console.warn("AST parse failed, falling back to regex", err);
+        return code.match(tokenRegex) || [];
+    }
+
+    traverse(ast, {
+        Identifier(path) {
+            if(path.node.loc){
+                features.push(`${path.node.name}|${path.node.loc.start.line},${path.node.loc.start.column}:${path.node.loc.end.line},${path.node.loc.end.column}`)
+            }else{
+                features.push(`${path.node.name}`)
+            }
+        },
+        MemberExpression(path) {
+            if (t.isIdentifier(path.node.property)) {
+                if(path.node.loc){
+                    features.push(`${path.node.property.name}|${path.node.loc.start.line},${path.node.loc.start.column}:${path.node.loc.end.line},${path.node.loc.end.column}`)
+                }else{
+                    features.push(`${path.node.property.name}`)
+                }
+            }
+            if (t.isIdentifier(path.node.object)) {
+                if(path.node.loc){
+                    features.push(`${path.node.object.name}|${path.node.loc.start.line},${path.node.loc.start.column}:${path.node.loc.end.line},${path.node.loc.end.column}`)
+                }else{
+                    features.push(`${path.node.object.name}`)
+                }
+            }
+        },
+        CallExpression(path) {
+            if (t.isIdentifier(path.node.callee)) {
+                if(path.node.loc){
+                    features.push(`${path.node.callee.name}|${path.node.loc.start.line},${path.node.loc.start.column}:${path.node.loc.end.line},${path.node.loc.end.column}`)
+                }else{
+                    features.push(`${path.node.callee.name}`)
+                }
+            }
+            if (t.isMemberExpression(path.node.callee) && t.isIdentifier(path.node.callee.property)) {
+                if(path.node.loc){
+                    features.push(`${path.node.callee.property.name}|${path.node.loc.start.line},${path.node.loc.start.column}:${path.node.loc.end.line},${path.node.loc.end.column}`)
+                }else{
+                    features.push(`${path.node.callee.property.name}`)
+                }
+            }
+        },
+    });
+    
+    if(word)
+        features = features.filter(feature => feature.split('|')[0].endsWith(word))
+
+    return [...new Set(features)];
+
+}
+
+function extractHtmlFeatures(html: string, word?: string): string[] {
+    const document = parse(html, { sourceCodeLocationInfo: true });
+    let features: string[] = [];
+
+    function walk(node: any) {
+        if (node.tagName) {
+            if(node.sourceCodeLocation){
+                features.push(`html.elements.${node.tagName}|${node.sourceCodeLocation.startLine},${node.sourceCodeLocation.startCol}:${node.sourceCodeLocation.endLine},${node.sourceCodeLocation.endCol}`);
+            }else{
+                features.push(`html.elements.${node.tagName}`);
+            }
+
+            if (node.attrs) {
+                node.attrs.forEach((attr: any) => {
+                    if(node.sourceCodeLocation && node.sourceCodeLocation.attrs){
+                        const sourceCodeLocation = node.sourceCodeLocation.attrs[attr.name]
+                        features.push(`html.elements.${node.tagName}.${attr.name}|${sourceCodeLocation.startLine},${sourceCodeLocation.startCol}:${sourceCodeLocation.endLine},${sourceCodeLocation.endCol}`);
+                    }else{
+                        features.push(`html.elements.${node.tagName}`);
+                    }
+                });
+            }
+        }
+
+        if (node.childNodes) {
+            node.childNodes.forEach(walk);
+        }
+    }
+
+    walk(document);
+
+    if(word)
+        features = features.filter(feature => feature.split('|')[0].endsWith(word))
+
+    return features;
+}
+
+function extractCssFeatures(css: string, word?: string): string[] {
+    if(css.endsWith('{')){
+        css = css.split('{')[0]
+    }
+    const root = postcss.parse(css);
+    let features: string[] = [];
+
+    root.walkDecls(decl => {
+        if(decl.source && decl.source.start){
+            features.push(`css.properties.${decl.prop}|${decl.source.start.line},${decl.source.start.column}:${decl.source.end?.line},${decl.source.end?.column}`);
+        }else {
+            features.push(`css.properties.${decl.prop}`);
+        }
     });
 
-  } catch (err) {
-    // console.warn("AST parse failed, falling back to regex", err);
-    return code.match(tokenRegex) || [];
-  }
+    root.walkAtRules(rule => {
+        if(rule.source && rule.source.start){
+            features.push(`css.at-rules.${rule.name}|${rule.source.start.line},${rule.source.start?.column}:${rule.source.end?.line},${rule.source.end?.column}`);
+        }else {
+            features.push(`css.at-rules.${rule.name}`);
+        }
+    });
 
-  traverse(ast, {
-    Identifier(path) {
-      // features.push(path.node.name)
-        // console.log('path.node.name', path.node.name)
-    },
-    MemberExpression(path) {
-      if (t.isIdentifier(path.node.property)) {
-        features.push(path.node.property.name)
-        // console.log('path.node.property.name', path.node.property.name)
-      }
-      if (t.isIdentifier(path.node.object)) {
-        // console.log('path.node.object.name', path.node.object.name)
-        features.push(path.node.object.name)
-      }
-    },
-    CallExpression(path) {
-      if (t.isIdentifier(path.node.callee)) {
-        features.push(path.node.callee.name)
-        // console.log('path.node.callee.name', path.node.callee.name)
-      }
-      if (t.isMemberExpression(path.node.callee) && t.isIdentifier(path.node.callee.property)) {
-        features.push(path.node.callee.property.name)
-        // console.log('path.node.callee.property.name', path.node.callee.property.name)
-      }
-    },
-  });
+    if(word)
+        features = features.filter(feature => feature.split('|')[0].endsWith(word))
 
-  let feature = features.filter(feature => feature.endsWith(word))
-
-  return feature;
-
-  // const features: string[] = [];
-  // let match;
-  // while ((match = tokenRegex.exec(code)) !== null) {
-  //   features.push(match[1]);
-  // }
-  // return features;
-}
-
-function extractHtmlFeatures(html: string, word: string): string[] {
-  const document = parse(html);
-  const features: string[] = [];
-
-  function walk(node: any) {
-    if (node.tagName) {
-      features.push(`html.elements.${node.tagName}`);
-
-      if (node.attrs) {
-        node.attrs.forEach((attr: any) => {
-          features.push(`html.elements.${node.tagName}.${attr.name}`);
-        });
-      }
-    }
-
-    if (node.childNodes) {
-      node.childNodes.forEach(walk);
-    }
-  }
-
-  walk(document);
-
-  let feature = features.filter(feature => feature.endsWith(word))
-  return feature;
-}
-
-function extractCssFeatures(css: string): string[] {
-  if(css.endsWith('{')){
-    css = css.split('{')[0]
-  }
-  const root = postcss.parse(css);
-  const features: string[] = [];
-
-  root.walkDecls(decl => {
-    features.push(`css.properties.${decl.prop}`);
-  });
-
-  root.walkAtRules(rule => {
-    features.push(`css.at-rules.${rule.name}`);
-  });
-
-  return features;
+    return features;
 }
 
 export function extractFeatures(
   file: string,
   code: string,
-  word: string
+  word?: string
 ): string[] {
 
-  if(file.endsWith('.html')){
-    return extractHtmlFeatures(code, word);
-  }else if(file.endsWith('.css')){
-    return extractCssFeatures(code);
-  }else if(file.endsWith('.ts')) {
-    return extractJsFeatures(code, word);
-  }else if(file.endsWith('.tsx')) {
-    return extractJsFeatures(code, word);
-  }else if(file.endsWith('.js')) {
-    return extractJsFeatures(code, word);
-  }else if(file.endsWith('.jsx')) {
-    return extractJsFeatures(code, word);
-  }else {
-    return []
-  }
+    if(file.endsWith('.html')){
+        return extractHtmlFeatures(code, word);
+    }else if(file.endsWith('.css')){
+        return extractCssFeatures(code, word);
+    }else if(file.endsWith('.ts')) {
+        return extractJsFeatures(code, word);
+    }else if(file.endsWith('.tsx')) {
+        return extractJsFeatures(code, word);
+    }else if(file.endsWith('.js')) {
+        return extractJsFeatures(code, word);
+    }else if(file.endsWith('.jsx')) {
+        return extractJsFeatures(code, word);
+    }else {
+        return []
+    }
+}
+
+function scanDocumentForDiagnostics(document: vscode.TextDocument, diagnostics: vscode.DiagnosticCollection, baselineYear: string) {
+    if (!["javascript", "typescript", "css", "html", "typescriptreact", "javascriptreact"].includes(document.languageId)) return;
+    const text = document.getText();
+    const diags: vscode.Diagnostic[] = [];
+    
+    const tokens = extractFeatures(document.fileName, text)
+
+    try{
+        for(const token of tokens){
+            const featureKey = core.findFeature(token.split('|')[0]) ?? core.findFeatureByBCD(token.split('|')[0]);
+            if (!featureKey) continue;
+
+            const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear, minBaseline: 'high' });
+
+            if (!baseline.inBaseline) {
+              
+                let startPos = parseInt(token.split('|')[1].split(':')[0].split(',')[0])
+                let startCol = parseInt(token.split('|')[1].split(':')[0].split(',')[1])
+                let endPos = parseInt(token.split('|')[1].split(':')[1].split(',')[0])
+                let endCol = parseInt(token.split('|')[1].split(':')[1].split(',')[1])
+                const startPosition = new vscode.Position(startPos-1, startCol-1);
+                const endPosition = new vscode.Position(endPos-1, endCol-1);
+                // console.log(startPos, startCol, endPos, endCol)
+                // console.log(startPos, endPos, token,featureKey )
+                const rng = new vscode.Range(startPosition, endPosition);
+                const diag = new vscode.Diagnostic(rng, `Feature ${featureKey} from ${token.split('|')[0]} is not in Baseline ${baselineYear}`, vscode.DiagnosticSeverity.Warning);
+                diag.source = "baseline-insight";
+                diags.push(diag);
+            }
+        }
+    }catch (err){}
+
+    diagnostics.set(document.uri, diags);
 }
 
 export function deactivate() {}
