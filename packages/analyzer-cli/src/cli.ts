@@ -149,9 +149,9 @@ export function extractFeatures(
     case ".ts":
       return extractJsFeatures(code);
     case ".tsx":
-      return extractJsFeatures(code);
+      return [ ...extractJsFeatures(code), ...extractHtmlFeatures(code)];
     case ".jsx":
-      return extractJsFeatures(code);
+      return [ ...extractJsFeatures(code), ...extractHtmlFeatures(code)];
     case ".html":
       return extractHtmlFeatures(code);
     case ".css":

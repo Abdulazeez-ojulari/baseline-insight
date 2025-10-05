@@ -1,77 +1,131 @@
 {
-  "name": "@baseline-insight/vscode-extension",
-  "displayName": "Baseline Insight",
-  "version": "0.1.0",
-  "publisher": "your-publisher",
-  "engines": {
-    "vscode": "^1.76.0"
-  },
-  "contributes": {
-    "languages": [
-      {
-        "id": "javascript",
-        "aliases": [
-          "JavaScript",
-          "js"
+    "name": "baseline-insight",
+    "displayName": "Baseline Insight With Web Features",
+    "version": "1.0.1",
+    "publisher": "abdulazeez-ojulari",
+    "description": "Baseline insight is a Visual Studio Code extension that helps developers analyze web technologies, CSS/HTML features, and compatibility data directly from their editor. It integrates with the Baseline Core Engine to detect and highlight modern web features and provide compatibility insights for multiple browsers",
+    "engines": {
+        "vscode": "^1.76.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Abdulazeez-ojulari/baseline-insight.git"
+    },
+    "contributes": {
+        "commands": [
+            {
+                "command": "baseline-insight.analyze",
+                "title": "Analyze with Baseline Insight"
+            }
         ],
-        "extensions": [
-          ".js"
-        ]
-      },
-      {
-        "id": "typescript",
-        "aliases": [
-          "TypeScript",
-          "ts"
+        "languages": [
+            {
+                "id": "javascript",
+                "aliases": [
+                    "JavaScript",
+                    "js"
+                ],
+                "extensions": [
+                    ".js"
+                ]
+            },
+            {
+                "id": "typescript",
+                "aliases": [
+                    "TypeScript",
+                    "ts"
+                ],
+                "extensions": [
+                    ".ts"
+                ]
+            },
+            {
+                "id": "html",
+                "aliases": [
+                    "HTML",
+                    "htm"
+                ],
+                "extensions": [
+                    ".html",
+                    ".htm"
+                ]
+            },
+            {
+                "id": "css",
+                "aliases": [
+                    "CSS"
+                ],
+                "extensions": [
+                    ".css"
+                ]
+            },
+            {
+                "id": "typescriptreact",
+                "aliases": [
+                    "Typescriptreact"
+                ],
+                "extensions": [
+                    ".tsx"
+                ]
+            },
+            {
+                "id": "javascriptreact",
+                "aliases": [
+                    "Javascriptreact"
+                ],
+                "extensions": [
+                    ".jsx"
+                ]
+            }
         ],
-        "extensions": [
-          ".ts"
-        ]
-      },
-      {
-        "id": "html",
-        "aliases": [
-          "HTML",
-          "htm"
-        ],
-        "extensions": [
-          ".html",
-          ".htm"
-        ]
-      },
-      {
-        "id": "css",
-        "aliases": [
-          "CSS"
-        ],
-        "extensions": [
-          ".css"
-        ]
-      }
-    ]
-  },
-  "activationEvents": [
-    "onLanguage:javascript",
-    "onLanguage:typescript",
-    "onLanguage:html",
-    "onLanguage:css"
-  ],
-  "main": "./out/extension.js",
-  "scripts": {
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
-  },
-  "dependencies": {
-    "@babel/parser": "^7.28.4",
-    "@babel/traverse": "^7.28.4",
-    "@babel/types": "^7.28.4",
-    "@baseline-insight/core-engine": "*",
-    "parse5": "^8.0.0",
-    "postcss": "^8.5.6",
-    "vscode-languageclient": "^8.0.0"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.76.0",
-    "typescript": "^5.0.0"
-  }
+        "configuration": {
+            "title": "Baseline Insight",
+            "properties": {
+                "baselineInsight.year": {
+                    "type": "string",
+                    "default": "2017",
+                    "description": "The Baseline year used to determine supported web features. Example: 2017, 2020, 2023"
+                },
+                "baselineInsight.enableHover": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "The Baseline enableHover used to disable or enable this feature upon hover. Example: true or false"
+                },
+                "baselineInsight.scanOnSave": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "The Baseline scanOnSave used to disable or enable this feature upon save. Example: true or false"
+                }
+            }
+        }
+    },
+    "activationEvents": [
+        "onLanguage:javascript",
+        "onLanguage:typescript",
+        "onLanguage:typescriptreact",
+        "onLanguage:javascriptreact",
+        "onLanguage:html",
+        "onLanguage:css"
+    ],
+    "main": "./out/extension.js",
+    "scripts": {
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "vscode:prepublish": "npm run build",
+        "build": "tsc -p ./"
+    },
+    "dependencies": {
+        "@babel/parser": "^7.28.4",
+        "@babel/traverse": "^7.28.4",
+        "@babel/types": "^7.28.4",
+        "@baseline-insight/core-engine": "^1.0.0",
+        "parse5": "^8.0.0",
+        "postcss": "^8.5.6",
+        "vscode-languageclient": "^8.0.0"
+    },
+    "devDependencies": {
+        "@types/babel__traverse": "^7.28.0",
+        "@types/vscode": "^1.76.0",
+        "typescript": "^5.0.0"
+    }
 }

@@ -8,69 +8,88 @@ import * as t from "@babel/types";
 
 export function activate(context: vscode.ExtensionContext) {
 
-    const baselineYear = vscode.workspace.getConfiguration("baselineInsight").get("year", "2017");
-
-    const hoverProvider = vscode.languages.registerHoverProvider(
-        [
-        { scheme: "file", language: "javascript" }, 
-        { scheme: "file", language: "typescript" }, 
-        { scheme: "file", language: "css" }, 
-        { scheme: "file", language: "html" },
-        { scheme: "file", language: "typescriptreact" },
-        { scheme: "file", language: "javascriptreact" },
-        ],
-        {
-        provideHover(document, position) {
-            const lineText = document.lineAt(position.line).text;
-
-            const wordRange = document.getWordRangeAtPosition(position);
-            if (!wordRange) return;
-            const word = document.getText(wordRange);
-
-            const lines = [];
-
-            try{
-                //   console.log(lineText, word)
-                const tokens = extractFeatures(document.fileName, lineText, word)
-                //   console.log(tokens)
-
-                for(const token of tokens){
-                    const featureKey = core.findFeature(token.split('|')[0]) ?? core.findFeatureByBCD(token.split('|')[0]);
-                    if (!featureKey) continue;
-
-                    const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear, minBaseline: 'high' });
-                    const info = core.getFeatureInfo(featureKey);
-                    const support = core.getFeatureSupport(featureKey);
-
-                    lines.push(`**Baseline Insight** — \`${featureKey}\``);
-                    lines.push(`- In Baseline ${baselineYear}: **${baseline.inBaseline ? "Yes" : "No"}**`);
-                    if (baseline.reason) lines.push(`- Reason: ${baseline.reason}`);
-                    if (info?.description) lines.push(`- Description: ${info.description}`);
-                    // if (support?.spec) lines.push(`- Spec: ${support.spec}`);
-                    lines.push(`\n[Open MDN](${mdnLinkForFeature(featureKey)})`);
-                }
-            }catch (err){console.log(err)}
-            
-            const contents = new vscode.MarkdownString()
-            contents.appendMarkdown(lines.join("\n\n"))
-
-            contents.isTrusted = true;
-            return new vscode.Hover(contents, wordRange);
+    let baselineYear = vscode.workspace.getConfiguration("baselineInsight").get("year", "2017");
+    let enableHover = vscode.workspace.getConfiguration("baselineInsight").get("enableHover", true);
+    let scanOnSave = vscode.workspace.getConfiguration("baselineInsight").get("scanOnSave", true);
+    vscode.workspace.onDidChangeConfiguration((event) => {
+        if (event.affectsConfiguration("baselineInsight.year")) {
+            baselineYear = vscode.workspace.getConfiguration("baselineInsight").get("year", "2017");
+            vscode.window.showInformationMessage(`Baseline year updated to ${baselineYear}`);
         }
+        if (event.affectsConfiguration("baselineInsight.enableHover")) {
+            enableHover = vscode.workspace.getConfiguration("baselineInsight").get("enableHover", true);
+            vscode.window.showInformationMessage(`Baseline enableHover updated to ${enableHover}`);
         }
-    );
-
-    context.subscriptions.push(hoverProvider);
-
-    const diagnosticCollection = vscode.languages.createDiagnosticCollection("baseline-insight");
-    context.subscriptions.push(diagnosticCollection);
-
-    vscode.workspace.onDidSaveTextDocument((doc) => {
-        scanDocumentForDiagnostics(doc, diagnosticCollection, baselineYear);
+        if (event.affectsConfiguration("baselineInsight.scanOnSave")) {
+            scanOnSave = vscode.workspace.getConfiguration("baselineInsight").get("scanOnSave", true);
+            vscode.window.showInformationMessage(`Baseline scanOnSave updated to ${scanOnSave}`);
+        }
     });
 
-    if (vscode.window.activeTextEditor) {
-        scanDocumentForDiagnostics(vscode.window.activeTextEditor.document, diagnosticCollection, baselineYear);
+    if(enableHover){
+        const hoverProvider = vscode.languages.registerHoverProvider(
+            [
+            { scheme: "file", language: "javascript" }, 
+            { scheme: "file", language: "typescript" }, 
+            { scheme: "file", language: "css" }, 
+            { scheme: "file", language: "html" },
+            { scheme: "file", language: "typescriptreact" },
+            { scheme: "file", language: "javascriptreact" },
+            ],
+            {
+            provideHover(document, position) {
+                const lineText = document.lineAt(position.line).text;
+
+                const wordRange = document.getWordRangeAtPosition(position);
+                if (!wordRange) return;
+                const word = document.getText(wordRange);
+
+                const lines = [];
+
+                try{
+                    //   console.log(lineText, word)
+                    const tokens = extractFeatures(document.fileName, lineText, word)
+                    //   console.log(tokens)
+
+                    for(const token of tokens){
+                        const featureKey = core.findFeature(token.split('|')[0]) ?? core.findFeatureByBCD(token.split('|')[0]);
+                        if (!featureKey) continue;
+
+                        const baseline = core.isFeatureInBaseline(featureKey, { year: baselineYear, minBaseline: 'high' });
+                        const info = core.getFeatureInfo(featureKey);
+                        const support = core.getFeatureSupport(featureKey);
+
+                        lines.push(`**Baseline Insight** — \`${featureKey}\``);
+                        lines.push(`- In Baseline ${baselineYear}: **${baseline.inBaseline ? "Yes" : "No"}**`);
+                        if (baseline.reason) lines.push(`- Reason: ${baseline.reason}`);
+                        if (info?.description) lines.push(`- Description: ${info.description}`);
+                        // if (support?.spec) lines.push(`- Spec: ${support.spec}`);
+                        lines.push(`\n[Open MDN](${mdnLinkForFeature(featureKey)})`);
+                    }
+                }catch (err){console.log(err)}
+                
+                const contents = new vscode.MarkdownString()
+                contents.appendMarkdown(lines.join("\n\n"))
+
+                contents.isTrusted = true;
+                return new vscode.Hover(contents, wordRange);
+            }
+            }
+        );
+        context.subscriptions.push(hoverProvider);
+    }
+
+    if(scanOnSave){
+        const diagnosticCollection = vscode.languages.createDiagnosticCollection("baseline-insight");
+        context.subscriptions.push(diagnosticCollection);
+
+        vscode.workspace.onDidSaveTextDocument((doc) => {
+            scanDocumentForDiagnostics(doc, diagnosticCollection, baselineYear);
+        });
+
+        if (vscode.window.activeTextEditor) {
+            scanDocumentForDiagnostics(vscode.window.activeTextEditor.document, diagnosticCollection, baselineYear);
+        }
     }
 }
 
@@ -233,11 +252,11 @@ export function extractFeatures(
     }else if(file.endsWith('.ts')) {
         return extractJsFeatures(code, word);
     }else if(file.endsWith('.tsx')) {
-        return extractJsFeatures(code, word);
+        return [ ...extractJsFeatures(code, word), ...extractHtmlFeatures(code, word)];
     }else if(file.endsWith('.js')) {
         return extractJsFeatures(code, word);
     }else if(file.endsWith('.jsx')) {
-        return extractJsFeatures(code, word);
+        return [ ...extractJsFeatures(code, word), ...extractHtmlFeatures(code, word)];
     }else {
         return []
     }

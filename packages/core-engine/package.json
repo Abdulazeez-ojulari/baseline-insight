@@ -1,11 +1,16 @@
 {
     "name": "@baseline-insight/core-engine",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "license": "MIT",
     "scripts": {
-        "build": "tsc -p tsconfig.json",
-        "dev": "tsc -w -p tsconfig.json"
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "dev": "tsc -w -p tsconfig.json",
+        "prepublishOnly": "npm run build"
     },
     "dependencies": {
         "web-features": "^3.0.0"

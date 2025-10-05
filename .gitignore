@@ -6,7 +6,7 @@ node_modules/*
 /packages/analyzer-cli/node_modules/*
 /packages/analyzer-cli/dist/*
 
-/packages/core-engine/node_modules/*
+/packages/core-engine/node_modules
 /packages/core-engine/dist
 /packages/core-engine/node_modules/*
 /packages/core-engine/dist/*

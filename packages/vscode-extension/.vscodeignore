@@ -1,0 +1,14 @@
+
+**
+# //////
+!out/**
+!package.json
+!README.md
+!LICENSE.txt
+!.vscodeignore
+!tsconfig.json
+!node_modules/**
+
+# ////
+../**
+../../**
